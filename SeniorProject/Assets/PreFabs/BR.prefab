@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc37c3b7740e664cbb8e5334a5efe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorDirection: 1
+  doorDirection: 2
 --- !u!1 &5647829047186198512
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc37c3b7740e664cbb8e5334a5efe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorDirection: 4
+  doorDirection: 3
 --- !u!1 &8733336525716145324
 GameObject:
   m_ObjectHideFlags: 0

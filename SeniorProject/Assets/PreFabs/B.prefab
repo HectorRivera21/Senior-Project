@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc37c3b7740e664cbb8e5334a5efe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorDirection: 1
+  doorDirection: 2
 --- !u!1 &7950579848386545464
 GameObject:
   m_ObjectHideFlags: 0
