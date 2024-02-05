@@ -14,7 +14,7 @@ public class MapGen : MonoBehaviour
     void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemps>();
-        Invoke("Spawn_map",1.5f);
+        Invoke("Spawn_map",0.5f);
     }
 
     void Spawn_map()
@@ -41,6 +41,7 @@ public class MapGen : MonoBehaviour
                 rand = Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
+            
             isSpawned = true;
         }
     }
@@ -49,8 +50,13 @@ public class MapGen : MonoBehaviour
     {
         if (other.CompareTag("SpawnPoint"))
         {
-            Debug.Log(gameObject);
-            Destroy(gameObject);
+            if(other.GetComponent<MapGen>().isSpawned == false && isSpawned == false)
+            {
+                Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+            isSpawned = true;
+            
         }
     }
 

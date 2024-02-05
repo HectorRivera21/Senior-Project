@@ -10,4 +10,6 @@ public class RoomTemps : MonoBehaviour
     public GameObject[] rightRooms;
 
     public GameObject closedRoom;
+
+    public List<GameObject> rooms;
 }
