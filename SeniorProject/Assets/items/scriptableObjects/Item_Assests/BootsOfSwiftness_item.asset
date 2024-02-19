@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea834a051f952b14eab9cae0daa6f38b, type: 3}
   m_Name: BootsOfSwiftness_item
   m_EditorClassIdentifier: 
-  name: Boots of Swiftness
+  itemName: BootsOfSwiftness
   description: Increase movement speed
   art: {fileID: 21300000, guid: fcf95f2ad06e04d47a2dbdcd7556cb7f, type: 3}
