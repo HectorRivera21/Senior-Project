@@ -10,6 +10,6 @@ public class boots : MonoBehaviour
     }
     public void IncreaseSpeed(){
         Debug.Log("adding speed");
-        player.move_speed += 5f;
+        //player.move_speed += 5f;
     }
 }
