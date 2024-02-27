@@ -23,12 +23,14 @@ public class playerShoot : MonoBehaviour
             {
                 canFire = true;
                 timer = 0;
+
             }
         }
         if (Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
             Instantiate(playerBullet, bulletTransform.position, Quaternion.identity);
+            
         }
 
     }
