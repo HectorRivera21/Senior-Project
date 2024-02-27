@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MapGen : MonoBehaviour
 {
-    // 1 Bot Door, 2 Top Door, 3 Left Door, 4 Right Door 
+    // 1 Bot Door, 2 Top Door, 3 Left Door, 4 Right Door]
     public int doorDirection;
 
     private RoomTemps templates;
