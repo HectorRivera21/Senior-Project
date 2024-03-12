@@ -15,9 +15,7 @@ public class bulletShoot : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
 
-
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-
+        // mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
