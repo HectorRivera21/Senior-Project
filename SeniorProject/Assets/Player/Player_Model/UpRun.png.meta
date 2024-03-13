@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da8d4b361fcc9cb4e9e24c8c64a71c69
+guid: efee41f515be54b41960c64e48f65e20
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 4
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slash-Sheet_0
+      name: UpRun_9
       rect:
         serializedVersion: 2
-        x: 0
+        x: 104
         y: 0
-        width: 16
-        height: 16
+        width: 18
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8346ca45d05011478509dec7168915e
-      internalID: 2105156331
+      spriteID: 12b62b2a609a9d344a2b44ef8c9de459
+      internalID: 1731150279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_1
+      name: UpRun_11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 232
+        y: 1
+        width: 18
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcd8535765fa2c14ab84ac7d866a6b98
-      internalID: -1358873061
+      spriteID: 03ebbcff62607c04498002eb093b2a63
+      internalID: -340198446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_2
+      name: UpRun_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 360
+        y: 1
+        width: 18
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a470f5bfda23dcb489fd47bf1cd39625
-      internalID: -1293591490
+      spriteID: 15968740e2061df44aa0b4f056c59cca
+      internalID: -521192334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_3
+      name: UpRun_15
       rect:
         serializedVersion: 2
-        x: 48
+        x: 488
         y: 0
-        width: 16
-        height: 16
+        width: 18
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88901b28afe97bb40a14ad3691ce6612
-      internalID: -1810615333
+      spriteID: 14931a355f5118c41ae4b5c122896a5f
+      internalID: 180457351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_4
+      name: UpRun_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
+        x: 616
+        y: 1
+        width: 18
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,45 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc3910109ddbd44897b1fa84728e6df
-      internalID: -620822177
+      spriteID: 5edbb65abc43d634fb08e604bde21415
+      internalID: 1297929442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_5
+      name: UpRun_19
       rect:
         serializedVersion: 2
-        x: 80
+        x: 744
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5, y: -8}
-        - {x: 4, y: -5}
-        - {x: -2, y: -5}
-        - {x: -3, y: -8}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e10b9d1d90c7eef43b0b1986afcb3a47
-      internalID: -2106665910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
+        width: 18
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +235,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4cc5d2a69178244e9d30a25ff3faefc
-      internalID: 431092854
+      spriteID: 37270bb87f5dba44e8efdc34c542c9b1
+      internalID: -1099841398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpRun_21
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 0
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54047385a1b428a45a6f24217708cdc1
+      internalID: 1237987397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpRun_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254e696daa5fc9b4ca3aa3e4e9ff0688
+      internalID: 1666994338
       vertices: []
       indices: 
       edges: []
@@ -277,13 +294,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slash-Sheet_0: 2105156331
-      slash-Sheet_3: -1810615333
-      slash-Sheet_1: -1358873061
-      slash-Sheet_6: 431092854
-      slash-Sheet_5: -2106665910
-      slash-Sheet_4: -620822177
-      slash-Sheet_2: -1293591490
+      UpRun_1: -1961710950
+      UpRun_19: -1099841398
+      UpRun_9: 1731150279
+      UpRun_8: -603479735
+      UpRun_14: 736746985
+      UpRun_17: 1297929442
+      UpRun_0: -75314869
+      UpRun_15: 180457351
+      UpRun_4: -1873484804
+      UpRun_23: 1666994338
+      UpRun_3: 457533169
+      UpRun_11: -340198446
+      UpRun_13: -521192334
+      UpRun_10: 1548556529
+      UpRun_18: 1494914699
+      UpRun_20: 1283571217
+      UpRun_12: 251396038
+      UpRun_22: 1026592626
+      UpRun_5: -2112390673
+      UpRun_6: 737913560
+      UpRun_16: -2135075893
+      UpRun_21: 1237987397
+      UpRun_2: 560269172
+      UpRun_7: 1163430115
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da8d4b361fcc9cb4e9e24c8c64a71c69
+guid: 144213ea8949f9e4d943f8c4b9fed2eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 4
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slash-Sheet_0
+      name: 01 Traveler Merchant-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 78
+        y: 93
+        width: 24
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8346ca45d05011478509dec7168915e
-      internalID: 2105156331
+      spriteID: 19e982c3d4d8eca42a3866fb7574762f
+      internalID: 1987094301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_1
+      name: 01 Traveler Merchant-Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 270
+        y: 93
+        width: 24
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcd8535765fa2c14ab84ac7d866a6b98
-      internalID: -1358873061
+      spriteID: 4f188ae837428ee418b2c07978f75763
+      internalID: 2109862309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_2
+      name: 01 Traveler Merchant-Sheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 462
+        y: 93
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a470f5bfda23dcb489fd47bf1cd39625
-      internalID: -1293591490
+      spriteID: 6a7d9387556bd91458d8b4c0546a43e8
+      internalID: 190268919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_3
+      name: 01 Traveler Merchant-Sheet_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 654
+        y: 93
+        width: 24
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88901b28afe97bb40a14ad3691ce6612
-      internalID: -1810615333
+      spriteID: 16b91e5e7c927964dba3f249b073c6bc
+      internalID: -2043342312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_4
+      name: 01 Traveler Merchant-Sheet_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
+        x: 846
+        y: 93
+        width: 24
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,45 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc3910109ddbd44897b1fa84728e6df
-      internalID: -620822177
+      spriteID: c91b7e239b0d22347b6f47aa8e26d75c
+      internalID: 1136137158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_5
+      name: 01 Traveler Merchant-Sheet_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5, y: -8}
-        - {x: 4, y: -5}
-        - {x: -2, y: -5}
-        - {x: -3, y: -8}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e10b9d1d90c7eef43b0b1986afcb3a47
-      internalID: -2106665910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
+        x: 1038
+        y: 93
+        width: 24
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +235,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4cc5d2a69178244e9d30a25ff3faefc
-      internalID: 431092854
+      spriteID: 36e546d66cb61f84e9b4585947416b93
+      internalID: 83588035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01 Traveler Merchant-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 93
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f913ba3a8ed12f4b8531a3ca1645994
+      internalID: 541611093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01 Traveler Merchant-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 93
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a287322f2ba8743bbb8c956b2040bc
+      internalID: -1708281919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01 Traveler Merchant-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 93
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e15aea8558f56640ac396212ebaa251
+      internalID: -1127325802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01 Traveler Merchant-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 93
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9d6000104d56d4891f10491999eb7a
+      internalID: 1717814654
       vertices: []
       indices: 
       edges: []
@@ -277,13 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slash-Sheet_0: 2105156331
-      slash-Sheet_3: -1810615333
-      slash-Sheet_1: -1358873061
-      slash-Sheet_6: 431092854
-      slash-Sheet_5: -2106665910
-      slash-Sheet_4: -620822177
-      slash-Sheet_2: -1293591490
+      01 Traveler Merchant-Sheet_1: 2109862309
+      01 Traveler Merchant-Sheet_5: 83588035
+      01 Traveler Merchant-Sheet_4: 1136137158
+      01 Traveler Merchant-Sheet_3: -2043342312
+      01 Traveler Merchant-Sheet_6: 541611093
+      01 Traveler Merchant-Sheet_9: 1717814654
+      01 Traveler Merchant-Sheet_0: 1987094301
+      01 Traveler Merchant-Sheet_8: -1127325802
+      01 Traveler Merchant-Sheet_2: 190268919
+      01 Traveler Merchant-Sheet_7: -1708281919
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
