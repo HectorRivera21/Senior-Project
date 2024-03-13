@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class DamianMovement : MonoBehaviour
 {
+    SpawnE _spawnE;
     public float move_speed = 5f;
     public float teleport_distance = 5f;
     public float teleport_cooldown = 3f;
@@ -15,8 +16,16 @@ public class DamianMovement : MonoBehaviour
     private bool is_tp = false;
     public Rigidbody2D rb;
 
+    void Start() {
+        _spawnE = gameObject.GetComponent<SpawnE>(); 
+    }
+
      void Update() {
         proccessInputs();
+    //     if(Input.GetKeyUp(KeyCode.Space)){
+    //         Debug.Log("KNOCK");
+    //         rb.AddForce(transform.up * 100000f);
+    //     }
     }
     void FixedUpdate() {
 
@@ -26,7 +35,7 @@ public class DamianMovement : MonoBehaviour
         if (teleport_active <= 0f && Input.GetKey(KeyCode.LeftShift))
         {
             // Timer has expired, perform actions here
-            Debug.Log("Timer has reached zero!");
+            // Debug.Log("Timer has reached zero!");
 
             // Reset the timer for repeated use
             teleport_active = teleport_cooldown;
@@ -42,6 +51,10 @@ public class DamianMovement : MonoBehaviour
 
         move_direction = new Vector2(moveX,moveY).normalized;
         // move_direction = new Vector2(moveX,moveY).normalized;
+
+        if(Input.GetKeyUp(KeyCode.Z)){
+            _spawnE.SpawnSlime();
+        }
     }
 
     void move(){
@@ -62,6 +75,6 @@ public class DamianMovement : MonoBehaviour
 
         
 
-        Debug.Log("Player teleported to: " + teleportDestination);
+        // Debug.Log("Player teleported to: " + teleportDestination);
     }
 }

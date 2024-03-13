@@ -11,7 +11,7 @@ public class Emovement : MonoBehaviour
         // m_target = GameObject.Find("PlayerTest").GetComponent<Transform>();
         if(other.name == "awareness_player"){
             m_target = GameObject.Find("PlayerTest").GetComponent<Transform>();
-            Debug.Log(other.name);
+            // Debug.Log(other.name);
         }
         
     }
