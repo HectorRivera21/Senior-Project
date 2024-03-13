@@ -7,6 +7,7 @@ TagManager:
   - Enemies
   - SpawnPoint
   - Rooms
+  - NPC
   layers:
   - Default
   - TransparentFX

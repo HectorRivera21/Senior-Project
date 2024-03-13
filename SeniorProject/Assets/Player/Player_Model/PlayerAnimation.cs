@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    // AttackStricpt
+    SlashAttackAnimation attackAni;
+
+
     //physics
     public bool _disablePlayerMove;
     private bool _isLeft;
@@ -18,16 +22,24 @@ public class PlayerAnimation : MonoBehaviour
 
     //Player animation states
     Animator _animator;
+    // Player Animations
     string _currentState;
     const string PLAYER_IDLE = "Player_Idle";
     private bool _is_idle;
     const string PLAYER_RUN = "Player_Run";
+    const string PLAYER_UPRUN = "Player_UpRun";
+    const string PLAYER_DOWNRUN = "Player_Down";
+
+    string last_input = "";
+
+
     private void Start() {
         _animator = gameObject.GetComponent<Animator>();
+        attackAni = gameObject.GetComponentInChildren<SlashAttackAnimation>();
         _isRight = true;
         _isLeft = false;
         _is_idle = false;
-        ChangeAnimationState(PLAYER_IDLE);
+        
     }
 
 
@@ -53,15 +65,37 @@ public class PlayerAnimation : MonoBehaviour
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
         Flip();
         // Debug.Log(_inputHorizontal);
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) && _is_idle == true){
-            Debug.Log("moving");
+        if(Input.GetKey(KeyCode.W)){
+            // Debug.Log("moving");
+            ChangeAnimationState(PLAYER_UPRUN);
+            last_input = "w";
+        }
+         // Debug.Log(_inputHorizontal);
+        else if(Input.GetKey(KeyCode.S)){
+            // Debug.Log("moving");
+            ChangeAnimationState(PLAYER_DOWNRUN);
+            last_input = "s";
+        }
+        else if(Input.GetKey(KeyCode.A)){
+            // Debug.Log("moving");
             ChangeAnimationState(PLAYER_RUN);
+            last_input = "a";
+        } else if(Input.GetKey(KeyCode.D)){
+            // Debug.Log("moving");
+            ChangeAnimationState(PLAYER_RUN);
+            last_input = "d";
         }
         else{
             _is_idle = true;
-            Debug.Log("standing");
+            // Debug.Log("standing");
             ChangeAnimationState(PLAYER_IDLE);
+            // attackAni.Nothing();
         }
+
+         if(Input.GetKeyUp(KeyCode.Mouse0)){
+               PlayAttack(last_input);
+            }
+
        
     }
 
@@ -75,6 +109,21 @@ public class PlayerAnimation : MonoBehaviour
             transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y,transform.localScale.z);
             _isRight = false;
             _isLeft = true;
+        }
+    }
+
+    void PlayAttack(string x ){
+        if(x == "w"){
+            attackAni.SlashUP();
+        }
+        else if(x == "s"){
+            attackAni.SlashDown();
+        }
+        else if(x == "a"){
+            attackAni.SlashRight();
+        }
+        else if(x == "d"){
+            attackAni.SlashRight();
         }
     }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da8d4b361fcc9cb4e9e24c8c64a71c69
+guid: 4789e00701d2fa448868b3dc16478dff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 4
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slash-Sheet_0
+      name: 02 Skull Merchant-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 9
+        y: 2
+        width: 40
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8346ca45d05011478509dec7168915e
-      internalID: 2105156331
+      spriteID: 99fefc5ab6182b1458ae10e9269789ed
+      internalID: -450542507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_1
+      name: 02 Skull Merchant-Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 73
+        y: 2
+        width: 40
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcd8535765fa2c14ab84ac7d866a6b98
-      internalID: -1358873061
+      spriteID: d17cf7bb73047e4429ee3df1528d75a2
+      internalID: 1205181873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_2
+      name: 02 Skull Merchant-Sheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 137
+        y: 2
+        width: 40
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a470f5bfda23dcb489fd47bf1cd39625
-      internalID: -1293591490
+      spriteID: 25b81663cc50ba64eaa64fa6c3242f8b
+      internalID: 1470138172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_3
+      name: 02 Skull Merchant-Sheet_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 200
+        y: 2
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88901b28afe97bb40a14ad3691ce6612
-      internalID: -1810615333
+      spriteID: 2dbc401cb57db0f4ebd0ea395a6689ac
+      internalID: 1193035522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_4
+      name: 02 Skull Merchant-Sheet_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
+        x: 264
+        y: 2
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,45 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc3910109ddbd44897b1fa84728e6df
-      internalID: -620822177
+      spriteID: 45ac396808a76294b99dd83f199179f6
+      internalID: 1269584306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash-Sheet_5
+      name: 02 Skull Merchant-Sheet_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 5, y: -8}
-        - {x: 4, y: -5}
-        - {x: -2, y: -5}
-        - {x: -3, y: -8}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e10b9d1d90c7eef43b0b1986afcb3a47
-      internalID: -2106665910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
+        x: 328
+        y: 2
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +235,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4cc5d2a69178244e9d30a25ff3faefc
-      internalID: 431092854
+      spriteID: e780ed3d509e08c49b07cd30b748dbe9
+      internalID: 1205896029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02 Skull Merchant-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 2
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c2cf69cd2e232419cc213be4d3842b
+      internalID: 2010377931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02 Skull Merchant-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 2
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc193c120420b44d80b490787a9c2ae
+      internalID: -1131564782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02 Skull Merchant-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 2
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66894a58e84fd2428dd6ac6ab4bb451
+      internalID: 1076421434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 02 Skull Merchant-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 2
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99d1bbe057cc374ea0dbb4477754244
+      internalID: 968653822
       vertices: []
       indices: 
       edges: []
@@ -277,13 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slash-Sheet_0: 2105156331
-      slash-Sheet_3: -1810615333
-      slash-Sheet_1: -1358873061
-      slash-Sheet_6: 431092854
-      slash-Sheet_5: -2106665910
-      slash-Sheet_4: -620822177
-      slash-Sheet_2: -1293591490
+      02 Skull Merchant-Sheet_9: 968653822
+      02 Skull Merchant-Sheet_1: 1205181873
+      02 Skull Merchant-Sheet_4: 1269584306
+      02 Skull Merchant-Sheet_2: 1470138172
+      02 Skull Merchant-Sheet_3: 1193035522
+      02 Skull Merchant-Sheet_0: -450542507
+      02 Skull Merchant-Sheet_7: -1131564782
+      02 Skull Merchant-Sheet_6: 2010377931
+      02 Skull Merchant-Sheet_8: 1076421434
+      02 Skull Merchant-Sheet_5: 1205896029
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
