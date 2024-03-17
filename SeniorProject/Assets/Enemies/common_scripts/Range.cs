@@ -8,8 +8,8 @@ public class Range : MonoBehaviour
     public float speed = 3f;
     private Rigidbody2D rb;
 
-    public float dist_to_shoot = 5f;
-    public float dist_to_stop = 3f;
+    public float dist_to_shoot = 10f;
+    public float dist_to_stop = 6f;
     public float fireRate = 1f;
     private float timeFire = 0;
     public GameObject bullet;
@@ -38,7 +38,16 @@ public class Range : MonoBehaviour
 
     private void FixedUpdate() {
         if(Vector2.Distance(target.position, transform.position) >= dist_to_stop){
-             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            // transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
+            Vector2 direction = (target.position - transform.position).normalized;
+            // Apply force in that direction
+            gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(direction.x * speed, direction.y * speed);
+        }
+        else if(Vector2.Distance(target.position, transform.position) <= dist_to_stop){
+            Vector2 direction = (target.position - transform.position).normalized;
+            // Apply force in that direction
+            gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(direction.x * 0, direction.y * 0);
         }
         // transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
@@ -51,7 +60,7 @@ public class Range : MonoBehaviour
 
     private void Shoot(){
         if(timeFire <= 0f){
-            Debug.Log("Shoot");
+            // Debug.Log("Shoot");
             Instantiate(bullet, transform.position, transform.rotation);
             timeFire = fireRate;
         }
