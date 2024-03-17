@@ -55,6 +55,9 @@ public class DamianMovement : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Z)){
             _spawnE.SpawnSlime();
         }
+        if(Input.GetKeyUp(KeyCode.X)){
+            _spawnE.SpawnGaurdain();
+        }
     }
 
     void move(){

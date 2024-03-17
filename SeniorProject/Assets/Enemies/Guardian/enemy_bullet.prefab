@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1250372764442854014}
   - component: {fileID: 4158703100517228278}
   - component: {fileID: 3149304312451574859}
+  - component: {fileID: -3916096244931898772}
   m_Layer: 0
   m_Name: enemy_bullet
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 15
+  k_force: 500000
+  dead_timer: 2
+  damage: 3
 --- !u!50 &3149304312451574859
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +141,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3916096244931898772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015762849235116986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9046646edf679e4796d1655f2551b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
