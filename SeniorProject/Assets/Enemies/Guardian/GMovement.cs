@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class GMovement : MonoBehaviour
 {
-    public Transform player; // Reference to the player transform
+    public GameObject player; // Reference to the player transform
     private bool isFlipped = true; // Flag to track if the sprite is flipped
+
+    private void Start() {
+        player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
     {
         // Check if the player has passed the sprite
-        if(player.position.x > transform.position.x && !isFlipped)
+        if(player.transform.position.x > transform.position.x && !isFlipped)
         {
             // Flip the sprite
             Flip();
         }
-        else if(player.position.x < transform.position.x && isFlipped){
+        else if(player.transform.position.x < transform.position.x && isFlipped){
             Flip();
         }
     }

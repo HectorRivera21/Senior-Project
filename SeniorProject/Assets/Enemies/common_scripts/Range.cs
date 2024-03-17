@@ -17,6 +17,7 @@ public class Range : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         timeFire = fireRate;
     }
