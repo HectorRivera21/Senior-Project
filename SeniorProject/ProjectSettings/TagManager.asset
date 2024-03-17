@@ -8,8 +8,16 @@ TagManager:
   - SpawnPoint
   - Rooms
   - player
+<<<<<<< HEAD
+  - Wall
+  - Locked Door
+=======
   - NPC
+<<<<<<< HEAD
   - PlayerHitBox
+=======
+>>>>>>> a363c644b565c19075b7319948ed6ad250ee19b6
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
