@@ -8,6 +8,8 @@ TagManager:
   - SpawnPoint
   - Rooms
   - player
+  - Wall
+  - Locked Door
   layers:
   - Default
   - TransparentFX
