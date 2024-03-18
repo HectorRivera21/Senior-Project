@@ -9,6 +9,8 @@ public class enemeis : ScriptableObject {
     public Sprite art;
     public int health;
     public int damage;
+
+    public int exp;
     
     public void Print(){
         Debug.Log(e_name + " " + description + " ");
