@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class boots : MonoBehaviour
 {
-    private Movement player;
+    private DamianMovement player;
     private void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<DamianMovement>();
     }
     public void IncreaseSpeed(){
         Debug.Log("adding speed");
