@@ -48,7 +48,7 @@ public class MapGen : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("SpawnPoint"))
+        if (other.CompareTag("SpawnPoint")&& !other.CompareTag("player"))
         {
             if(other.GetComponent<MapGen>().isSpawned == false && isSpawned == false)
             {
