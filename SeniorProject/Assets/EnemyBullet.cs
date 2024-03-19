@@ -13,7 +13,7 @@ public class EnemyBullet : MonoBehaviour
     public float dead_timer = 2.0f;
     private GameObject player;
 
-    public int damage = 3;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,6 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
             // Debug.Log(other.name);
-            other.GetComponent<PlayerAttr>().current_health -= damage;
             AddingKnockBack();
             Destroy(gameObject);
         }
@@ -52,8 +51,9 @@ public class EnemyBullet : MonoBehaviour
         Vector2 direction = (player.transform.position - transform.position).normalized;
         //knockback is in direcrtion
         Vector2 knockback = direction * k_force; 
-        Debug.Log("DIRECTION: " + direction);
+        Debug.Log("DIRECTION: " + direction + " Player current heaalth: " + player.GetComponent<PlayerAttr>().current_health);
 
         player.GetComponent<Rigidbody2D>().AddForce(knockback);
+        player.GetComponent<PlayerAttr>().current_health -= damage;
     }
 }
