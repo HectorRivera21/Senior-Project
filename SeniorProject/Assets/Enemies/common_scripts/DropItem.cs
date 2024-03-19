@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -30,8 +31,8 @@ public class DropItem : MonoBehaviour
         random = Random.Range(0,100);
         // Debug.Log(random);
         if(random > 50){
-            Debug.Log("Drop item");
-            Instantiate(spawnItem, new Vector2 (transform.position.x,transform.position.y), transform.rotation);
+            // Debug.Log("Drop item");
+            Instantiate(spawnItem, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
         }
     }
 }
