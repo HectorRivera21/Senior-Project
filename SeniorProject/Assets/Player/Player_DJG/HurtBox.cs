@@ -42,11 +42,16 @@ public class HurtBox : MonoBehaviour
             // Debug.Log(player.health - damage);
 
             player.current_health -= damage;
+        
+            if(player.current_health < 0){
+                Destroy(player.gameObject);
+            }
+
             Debug.Log("Player Health " + player.current_health);
             can_be_damage = false;
             can_be_damage_time = 1;
 
-             Vector2 direction = (transform.position- Enemey.transform.position).normalized;
+            Vector2 direction = (transform.position- Enemey.transform.position).normalized;
             my_rb.AddForce(direction * 1000000f);
         }
     }
