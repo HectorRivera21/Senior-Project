@@ -3,27 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
-  tags:
-  - Enemies
-  - NPC
-  - PlayerHitBox
-<<<<<<< HEAD
->>>>>>> main
-=======
-  - Rooms
-  - player
-  - SpawnPoint
-  - Wall
-  - Locked Door
-  - Normal Door
-  - E_HitBox
->>>>>>> main
   layers:
   - Default
   - TransparentFX
