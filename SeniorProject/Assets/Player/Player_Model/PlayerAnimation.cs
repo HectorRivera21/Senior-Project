@@ -30,6 +30,8 @@ public class PlayerAnimation : MonoBehaviour
     const string PLAYER_UPRUN = "Player_UpRun";
     const string PLAYER_DOWNRUN = "Player_Down";
 
+    float attack_cooldown = 1f;
+
     string last_input = "";
 
 
@@ -92,9 +94,13 @@ public class PlayerAnimation : MonoBehaviour
             // attackAni.Nothing();
         }
 
-         if(Input.GetKeyUp(KeyCode.Mouse0)){
-               PlayAttack(last_input);
-            }
+        if(Input.GetKeyUp(KeyCode.Mouse0) && attack_cooldown < 0){
+            PlayAttack(last_input);
+            attack_cooldown = 1f;
+        }
+        else{
+            attack_cooldown -= Time.deltaTime;
+        }
 
        
     }
