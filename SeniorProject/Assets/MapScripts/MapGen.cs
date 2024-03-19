@@ -50,7 +50,8 @@ public class MapGen : MonoBehaviour
     {
         if (other.CompareTag("SpawnPoint")&& !other.CompareTag("player"))
         {
-            if(other.GetComponent<MapGen>().isSpawned == false && isSpawned == false)
+            MapGen otherMapGen = other.GetComponent<MapGen>();
+            if (otherMapGen != null && otherMapGen.isSpawned == false && isSpawned == false)
             {
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
                 Destroy(gameObject);
