@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemies
-  - SpawnPoint
-  - Rooms
-  - player
-<<<<<<< HEAD
-  - Wall
-  - Locked Door
-=======
-  - NPC
->>>>>>> a363c644b565c19075b7319948ed6ad250ee19b6
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -50,7 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Wall
-    uniqueID: 3220187683
     locked: 0
