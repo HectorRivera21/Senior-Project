@@ -44,6 +44,7 @@ public class HurtBox : MonoBehaviour
             player.current_health -= damage;
         
             if(player.current_health < 0){
+                Debug.Log("DESTROYED PLAYER");
                 Destroy(player.gameObject);
             }
 
@@ -53,6 +54,13 @@ public class HurtBox : MonoBehaviour
 
             Vector2 direction = (transform.position- Enemey.transform.position).normalized;
             my_rb.AddForce(direction * 1000000f);
+        }
+        else if(other.tag == "E_HitBox" && can_be_damage == true){
+            // player.current_health -= other.GetComponent<EnemyBullet>().damage;
+            if(player.current_health < 0){
+                Debug.Log("DESTROYED PLAYER");
+                Destroy(player.gameObject);
+            }
         }
     }
 

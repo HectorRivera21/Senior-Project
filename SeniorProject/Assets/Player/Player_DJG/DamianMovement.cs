@@ -9,10 +9,10 @@ public class DamianMovement : MonoBehaviour
 {
     SpawnE _spawnE;
     public float move_speed = 5f;
-    public float teleport_distance = 5f;
+    public float teleport_distance = 2f;
     public float teleport_cooldown = 3f;
     private float teleport_active = 0;
-    private Vector2 move_direction;
+    private Vector3 move_direction;
     private bool is_tp = false;
     public Rigidbody2D rb;
 
@@ -49,15 +49,15 @@ public class DamianMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        move_direction = new Vector2(moveX,moveY).normalized;
+        move_direction = new Vector3(moveX,moveY, -0.5f).normalized;
         // move_direction = new Vector2(moveX,moveY).normalized;
 
-        if(Input.GetKeyUp(KeyCode.Z)){
-            _spawnE.SpawnSlime();
-        }
-        if(Input.GetKeyUp(KeyCode.X)){
-            _spawnE.SpawnGaurdain();
-        }
+        // if(Input.GetKeyUp(KeyCode.Z)){
+        //     _spawnE.SpawnSlime();
+        // }
+        // if(Input.GetKeyUp(KeyCode.X)){
+        //     _spawnE.SpawnGaurdain();
+        // }
     }
 
     void move(){
@@ -68,10 +68,11 @@ public class DamianMovement : MonoBehaviour
     void TeleportPlayer()
     {
         // Get the current player position and rotation
-        Vector2 currentPosition = transform.position;
+        Vector3 currentPosition = transform.position;
 
         // Calculate the teleport destination
-        Vector2 teleportDestination = currentPosition + move_direction * teleport_distance;
+        Vector3 teleportDestination = currentPosition + move_direction * teleport_distance;
+        transform.position = new Vector3(transform.position.x,transform.position.y, -0.5f);
 
         // Teleport the player to the destination
         transform.position = teleportDestination;
