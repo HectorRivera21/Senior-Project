@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public float teleport_cooldown = 3f;
     private float teleport_active = 0;
     private Vector2 move_direction;
-    private bool is_tp = false;
+   // private bool is_tp = false;
     public Rigidbody2D rb;
 
      void Update() {
