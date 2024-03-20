@@ -6,7 +6,7 @@ public class E_hitBox : MonoBehaviour
 {
     Rigidbody2D p_rb;
 
-    public float knockbackForce = 100f;
+    public float knockbackForce;
     
     // Start is called before the first frame update
     void Start()
