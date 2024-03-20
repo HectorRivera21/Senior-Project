@@ -40,7 +40,7 @@ public class HurtBox : MonoBehaviour
         // Debug.Log(other);
         if(other.name == "HitBox" && can_be_damage == true){
             Enemey = other.transform.parent.gameObject;
-            Debug.Log(Enemey.name + " The Enemey object");
+            //Debug.Log(Enemey.name + " The Enemey object");
             int damage = other.GetComponentInParent<check>().me.damage;
             // Debug.Log(damage);
             // Debug.Log(player.health - damage);
@@ -50,7 +50,7 @@ public class HurtBox : MonoBehaviour
             healthBar.SetHealth(player.current_health);
         
             if(player.current_health < 0){
-                Debug.Log("DESTROYED PLAYER");
+              //  Debug.Log("DESTROYED PLAYER");
                 Time.timeScale = 0f;
                 //player.GetComponent<Movement>().enabled = false;
                 gameManager.gameOver();
@@ -59,7 +59,7 @@ public class HurtBox : MonoBehaviour
 
             }
 
-            Debug.Log("Player Health " + player.current_health);
+            //Debug.Log("Player Health " + player.current_health);
             can_be_damage = false;
             can_be_damage_time = 1;
 
@@ -69,7 +69,7 @@ public class HurtBox : MonoBehaviour
         else if(other.tag == "E_HitBox" && can_be_damage == true){
             // player.current_health -= other.GetComponent<EnemyBullet>().damage;
             if(player.current_health < 0){
-                Debug.Log("DESTROYED PLAYER");
+                //Debug.Log("DESTROYED PLAYER");
                 Time.timeScale = 0f;
                 //player.GetComponent<Movement>().enabled = false;
                 gameManager.gameOver();
@@ -80,7 +80,7 @@ public class HurtBox : MonoBehaviour
     }
 
     private void OnCollisionStay2D(Collision2D other) {
-        Debug.Log("TESTING COLLODDD");
+        //Debug.Log("TESTING COLLODDD");
     }
 
 }

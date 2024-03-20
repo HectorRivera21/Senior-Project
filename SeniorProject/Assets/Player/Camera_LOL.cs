@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Camera_LOL : MonoBehaviour
 {
     public float follow_speed = 5f;
     public float offset = 1f;

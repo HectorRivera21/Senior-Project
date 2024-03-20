@@ -13,6 +13,7 @@ public class Range : MonoBehaviour
     public float fireRate = 1f;
     private float timeFire = 0;
     public GameObject bullet;
+    private float dist;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,13 @@ public class Range : MonoBehaviour
         else{
             //
         }
-
-        if(Vector2.Distance(target.position, transform.position) <= dist_to_stop){
-            Shoot();
+        if (target != null)
+        {
+            dist = Vector2.Distance(target.position, transform.position);
+            if (dist <= dist_to_stop)
+            {
+                Shoot();
+            }
         }
     }
 
