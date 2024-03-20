@@ -14,14 +14,14 @@ public class check : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponentInParent<PlayerAttr>();
         health = me.health;
-        Debug.Log("Starting e_ health " + health);
+        //Debug.Log("Starting e_ health " + health);
     }
 
     void Update() {
         // health = me.health;
         if(health <= 0){
             exp();
-            Debug.Log("DESTROYING OBJ");
+            //Debug.Log("DESTROYING OBJ");
             gameObject.GetComponentInChildren<DropItem>().Drop_Item();
             Destroy(gameObject);
         }
@@ -33,6 +33,6 @@ public class check : MonoBehaviour
 
     void exp(){
         player.exp += me.exp;
-        Debug.Log( "EXP" + player.exp);
+        //Debug.Log( "EXP" + player.exp);
     }
 }
