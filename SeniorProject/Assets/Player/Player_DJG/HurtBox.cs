@@ -6,6 +6,9 @@ using UnityEngine;
 public class HurtBox : MonoBehaviour
 {
     GameObject Enemey;
+    public HealthBar healthBar;
+    public GameManagerScript gameManager;
+    public GameObject MapGeneration; 
 
     bool can_be_damage = false;
     float can_be_damage_time = 1;
@@ -18,6 +21,7 @@ public class HurtBox : MonoBehaviour
     {
         player = gameObject.GetComponentInParent<PlayerAttr>();
         my_rb = gameObject.GetComponentInParent<Rigidbody2D>();
+        Time.timeScale = 1f;
     }
     
 
@@ -41,11 +45,18 @@ public class HurtBox : MonoBehaviour
             // Debug.Log(damage);
             // Debug.Log(player.health - damage);
 
+            healthBar.SetMaxHealth(player.current_health);
             player.current_health -= damage;
+            healthBar.SetHealth(player.current_health);
         
             if(player.current_health < 0){
                 Debug.Log("DESTROYED PLAYER");
+                Time.timeScale = 0f;
+                //player.GetComponent<Movement>().enabled = false;
+                gameManager.gameOver();
                 Destroy(player.gameObject);
+                
+
             }
 
             Debug.Log("Player Health " + player.current_health);
@@ -59,7 +70,11 @@ public class HurtBox : MonoBehaviour
             // player.current_health -= other.GetComponent<EnemyBullet>().damage;
             if(player.current_health < 0){
                 Debug.Log("DESTROYED PLAYER");
+                Time.timeScale = 0f;
+                //player.GetComponent<Movement>().enabled = false;
+                gameManager.gameOver();
                 Destroy(player.gameObject);
+
             }
         }
     }

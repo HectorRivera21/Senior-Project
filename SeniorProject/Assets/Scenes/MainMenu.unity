@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa6027af2cb3d2449d42fd7bef74bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: health_bar
+  sceneName: MapGeneration
 --- !u!1 &149550326
 GameObject:
   m_ObjectHideFlags: 0
