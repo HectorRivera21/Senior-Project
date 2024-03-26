@@ -17,3 +17,4 @@ MonoBehaviour:
   art: {fileID: 0}
   health: 6
   damage: 2
+  exp: 5
