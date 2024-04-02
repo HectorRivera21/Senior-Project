@@ -18,3 +18,4 @@ MonoBehaviour:
   health: 6
   damage: 2
   exp: 5
+  gold_drop: 5

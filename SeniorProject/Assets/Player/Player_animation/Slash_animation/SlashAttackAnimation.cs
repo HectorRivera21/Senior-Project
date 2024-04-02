@@ -14,9 +14,12 @@ public class SlashAttackAnimation : MonoBehaviour
     const string PLAYER_SLASH_LEFT = "Player_slash_left";
     const string PLAYER_SLASH_RIGHT = "Player_slash_right";
     const string PLAYER_SLASH_DOWN = "Player_slash_down";
+
+    PlayerSfx player_sounds;
     // Start is called before the first frame update
     void Start()
     {
+        player_sounds = GetComponentInParent<PlayerSfx>();
         _animator = gameObject.GetComponent<Animator>();
     }
 
@@ -47,19 +50,23 @@ public class SlashAttackAnimation : MonoBehaviour
 
 
     public void SlashUP(){
+        player_sounds.PlayerSwoosh();
         Debug.Log("ATTACKING UP");
         // ChangeAnimationState(PLAYER_SLASH_UP);
         _animator.SetTrigger("attack_up");
     }
     public void SlashDown(){
+        player_sounds.PlayerSwoosh();
         // ChangeAnimationState(PLAYER_SLASH_DOWN);
         _animator.SetTrigger("attack_down");
     }
     public void SlashLeft(){
+         player_sounds.PlayerSwoosh();
         // ChangeAnimationState(PLAYER_SLASH_LEFT);
         _animator.SetTrigger("attack_left");
     }
     public void SlashRight(){
+         player_sounds.PlayerSwoosh();
         // ChangeAnimationState(PLAYER_SLASH_RIGHT);
         _animator.SetTrigger("attack_right");
         

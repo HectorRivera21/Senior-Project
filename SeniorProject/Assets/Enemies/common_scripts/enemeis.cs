@@ -11,6 +11,7 @@ public class enemeis : ScriptableObject {
     public int damage;
 
     public int exp;
+    public int gold_drop;
     
     public void Print(){
         Debug.Log(e_name + " " + description + " ");

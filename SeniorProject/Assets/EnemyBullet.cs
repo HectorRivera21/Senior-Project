@@ -54,6 +54,10 @@ public class EnemyBullet : MonoBehaviour
         Debug.Log("DIRECTION: " + direction + " Player current heaalth: " + player.GetComponent<PlayerAttr>().current_health);
 
         player.GetComponent<Rigidbody2D>().AddForce(knockback);
+
+        player.GetComponentInChildren<HurtBox>().healthBar.SetMaxHealth(player.GetComponent<PlayerAttr>().current_health);
         player.GetComponent<PlayerAttr>().current_health -= damage;
+        Debug.Log("PLAYERS HEALTH"+ player.GetComponent<PlayerAttr>().current_health);
+        player.GetComponentInChildren<HurtBox>().healthBar.SetHealth(player.GetComponent<PlayerAttr>().current_health);
     }
 }

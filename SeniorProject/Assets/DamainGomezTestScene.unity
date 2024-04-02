@@ -425,7 +425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &155072761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,13 +1091,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7396059751300408451, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396059751300408451, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396059751300408451, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396059751300408451, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7396059751300408510, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
       propertyPath: m_Name
       value: PlayerTest
       objectReference: {fileID: 0}
     - target: {fileID: 7396059751300408510, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
