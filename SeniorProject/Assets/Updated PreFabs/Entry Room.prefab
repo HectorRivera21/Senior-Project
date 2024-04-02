@@ -488,6 +488,7 @@ Transform:
   m_Children:
   - {fileID: 5308198553391314822}
   - {fileID: 3537993038776356648}
+  - {fileID: 6934770590326441876}
   m_Father: {fileID: 4284646200961232}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2036,7 +2037,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1074779613
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -2179,3 +2180,82 @@ CompositeCollider2D:
       - {x: 20.000029, y: 0}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1001 &5323097184615207829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4653056099745338145}
+    m_Modifications:
+    - target: {fileID: 1156341148222296086, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.970007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.060008105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+--- !u!1 &6472612241964925827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1156341148222296086, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+  m_PrefabInstance: {fileID: 5323097184615207829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3021457939215248153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6472612241964925827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05e0d3473097ec46b1053096247024f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &6934770590326441876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+  m_PrefabInstance: {fileID: 5323097184615207829}
+  m_PrefabAsset: {fileID: 0}

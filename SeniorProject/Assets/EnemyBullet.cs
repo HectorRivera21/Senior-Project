@@ -51,7 +51,7 @@ public class EnemyBullet : MonoBehaviour
         Vector2 direction = (player.transform.position - transform.position).normalized;
         //knockback is in direcrtion
         Vector2 knockback = direction * k_force; 
-        Debug.Log("DIRECTION: " + direction + " Player current heaalth: " + player.GetComponent<PlayerAttr>().current_health);
+        //Debug.Log("DIRECTION: " + direction + " Player current heaalth: " + player.GetComponent<PlayerAttr>().current_health);
 
         player.GetComponent<Rigidbody2D>().AddForce(knockback);
 
