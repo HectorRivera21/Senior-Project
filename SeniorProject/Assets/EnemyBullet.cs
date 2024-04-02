@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyBullet : MonoBehaviour
 {
     // public float speed;
@@ -12,7 +11,6 @@ public class EnemyBullet : MonoBehaviour
     public float k_force = 500000;
     public float dead_timer = 2.0f;
     private GameObject player;
-
     public int damage;
     // Start is called before the first frame update
     void Start()
@@ -22,9 +20,7 @@ public class EnemyBullet : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         Vector3 dir = target.transform.position - transform.position;
         rb.velocity = new Vector2(dir.x, dir.y).normalized * force;
-
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +30,6 @@ public class EnemyBullet : MonoBehaviour
         }
         // transform.Translate(move* speed * Time.deltaTime);
     }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
             // Debug.Log(other.name);
@@ -45,7 +40,6 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void AddingKnockBack(){
         // offset the collsion for knockback
         Vector2 direction = (player.transform.position - transform.position).normalized;
@@ -54,6 +48,10 @@ public class EnemyBullet : MonoBehaviour
         //Debug.Log("DIRECTION: " + direction + " Player current heaalth: " + player.GetComponent<PlayerAttr>().current_health);
 
         player.GetComponent<Rigidbody2D>().AddForce(knockback);
+
+        player.GetComponentInChildren<HurtBox>().healthBar.SetMaxHealth(player.GetComponent<PlayerAttr>().current_health);
         player.GetComponent<PlayerAttr>().current_health -= damage;
+        Debug.Log("PLAYERS HEALTH"+ player.GetComponent<PlayerAttr>().current_health);
+        player.GetComponentInChildren<HurtBox>().healthBar.SetHealth(player.GetComponent<PlayerAttr>().current_health);
     }
 }
