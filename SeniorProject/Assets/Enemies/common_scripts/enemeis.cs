@@ -9,6 +9,7 @@ public class enemeis : ScriptableObject {
     public Sprite art;
     public int health;
     public int damage;
+    public int gold_drop;
 
     public int exp;
     

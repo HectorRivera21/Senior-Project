@@ -23,6 +23,7 @@ public class check : MonoBehaviour
             exp();
             //Debug.Log("DESTROYING OBJ");
             gameObject.GetComponentInChildren<DropItem>().Drop_Item();
+            player.gold += me.gold_drop;
             Destroy(gameObject);
         }
     }
