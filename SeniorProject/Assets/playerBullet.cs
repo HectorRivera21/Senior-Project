@@ -5,35 +5,37 @@ using UnityEngine;
 public class playerBullet : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float force;
-    private float timer;
-    public int bulletDamage;
 
-    public GameObject hitEffect;
-    private Vector3 defaultSize = new Vector3(0.25f, 0.25f, 1.0f);
+    public float speed = 10f;        
+    public int damage = 10;
+    private float timer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        Vector3 direction = transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
-
-        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot);
+        rb.velocity = transform.right * speed;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy")) {
+            enemyHealth enemyHealth = collision.GetComponent<enemyHealth>();
+
+            if (enemyHealth != null) {
+                enemyHealth.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {
-        gameObject.transform.localScale = defaultSize;
-        bulletDamage = 1;
-    }
+        timer += Time.deltaTime;
 
-    // Update is called once per frame
-    void DeathBullet()
-    {
-        Destroy(gameObject, 5);
+        if (timer > 5)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

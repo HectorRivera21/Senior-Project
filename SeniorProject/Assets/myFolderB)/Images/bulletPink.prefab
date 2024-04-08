@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 732355836484752814}
   - component: {fileID: 1335471627124789929}
-  - component: {fileID: 7035800711375619753}
+  - component: {fileID: 8894943697640535195}
   - component: {fileID: 4141874241578566346}
+  - component: {fileID: 5053730353808508752}
   m_Layer: 0
   m_Name: bulletPink
   m_TagString: Untagged
@@ -86,21 +87,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7035800711375619753
-MonoBehaviour:
+--- !u!58 &8894943697640535195
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5535639864842257028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea93f40bf4d602b49a7fdddf80cbd303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 20
-  bulletDamage: 1
-  hitEffect: {fileID: 0}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!50 &4141874241578566346
 Rigidbody2D:
   serializedVersion: 4
@@ -122,3 +124,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5053730353808508752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5535639864842257028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea93f40bf4d602b49a7fdddf80cbd303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  damage: 10

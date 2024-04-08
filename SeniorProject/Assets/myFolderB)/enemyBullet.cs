@@ -8,6 +8,8 @@ public class enemyBullet : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float timer;
+    public int damage = 10;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,6 +20,20 @@ public class enemyBullet : MonoBehaviour
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
