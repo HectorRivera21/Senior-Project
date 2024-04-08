@@ -15,13 +15,18 @@ public class DamianMovement : MonoBehaviour
     private Vector3 move_direction;
     private bool is_tp = false;
     public Rigidbody2D rb;
+    public bool can_move = true;
 
     void Start() {
         _spawnE = gameObject.GetComponent<SpawnE>(); 
     }
 
      void Update() {
-        proccessInputs();
+        if (can_move)
+        {
+             proccessInputs();
+        }
+       
     //     if(Input.GetKeyUp(KeyCode.Space)){
     //         Debug.Log("KNOCK");
     //         rb.AddForce(transform.up * 100000f);

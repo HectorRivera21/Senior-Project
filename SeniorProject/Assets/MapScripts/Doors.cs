@@ -1,47 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
+    public float playerMovementOffset = 3f;
+    public float cameraMovementOffset = 10f;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject player = collision.gameObject;
-        if(player.CompareTag("Player"))
-        {
-            Vector3 camera_offset = Vector3.zero;
-            Vector3 player_offset = Vector3.zero;
 
-            float player_posx = player.transform.position.x;
-            float player_posy = player.transform.position.y;
+        if (player.CompareTag("Player"))
+        {
+            Vector3 playerOffset = Vector3.zero;
+            Vector3 cameraOffset = Vector3.zero;
 
             // Check player's movement direction
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
-            if (horizontalInput > 0)
+            if (Mathf.Abs(horizontalInput) > 0.1f && Mathf.Abs(horizontalInput) > Mathf.Abs(verticalInput))
             {
-                player_offset.x = 3f;
-                camera_offset.x = 10f;
+                playerOffset.x = Mathf.Sign(horizontalInput) * playerMovementOffset;
+                cameraOffset.x = Mathf.Sign(horizontalInput) * cameraMovementOffset;
             }
-            else if (horizontalInput < 0)
+            else if (Mathf.Abs(verticalInput) > 0.1f)
             {
-                player_offset.x = -3f;
-                camera_offset.x = -10f;
-            }
-            else if (verticalInput > 0)
-            {
-                player_offset.y = 3f;
-                camera_offset.y = 10f;
-            }
-            else if (verticalInput < 0)
-            {
-                player_offset.y = -3f;
-                camera_offset.y = -10f;
+                playerOffset.y = Mathf.Sign(verticalInput) * playerMovementOffset;
+                cameraOffset.y = Mathf.Sign(verticalInput) * cameraMovementOffset;
             }
 
-            player.transform.position = new Vector3(player_posx + player_offset.x, player_posy + player_offset.y, player.transform.position.z);
-            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + camera_offset.x, Camera.main.transform.position.y + camera_offset.y, Camera.main.transform.position.z);
+            player.transform.position += playerOffset;
+            Camera.main.transform.position += cameraOffset;
         }
     }
 }
