@@ -15,7 +15,7 @@ public class item_effects : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         player_Items = target.GetComponent<Player_items>();
         myBoots = gameObject.GetComponent<boots>();
-        Debug.Log("THE PLAYER OBJECT NAME : " + target.name);
+        Debug.Log("OBJ NAME : " + myItem.name);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

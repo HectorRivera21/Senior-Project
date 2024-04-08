@@ -15,12 +15,12 @@ public class GMovement : MonoBehaviour
     void Update()
     {
         // Check if the player has passed the sprite
-        if(player.transform.position.x > transform.position.x && !isFlipped)
+        if(player != null && player.transform.position.x > transform.position.x && !isFlipped)
         {
             // Flip the sprite
             Flip();
         }
-        else if(player.transform.position.x < transform.position.x && isFlipped){
+        else if(player != null && player.transform.position.x < transform.position.x && isFlipped){
             Flip();
         }
     }

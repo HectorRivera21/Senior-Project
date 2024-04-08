@@ -10,6 +10,7 @@ public class PlayerAttr : MonoBehaviour
     public int current_health = 10;
     public int damage = 2;
     public int exp = 0;
+    public int gold = 0;
 
     public int gold = 0;
 
