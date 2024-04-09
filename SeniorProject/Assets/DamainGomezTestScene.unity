@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3d1035eec5c6c409370b6983636e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiShop: {fileID: 0}
+  myShop: {fileID: 1811032904}
 --- !u!61 &118506536
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -12,10 +12,9 @@ public class PlayerAttr : MonoBehaviour
     public int exp = 0;
     public int gold = 0;
 
-    public int gold = 0;
+    //ExpBar xpBar;
 
-
-    int how_exp = 5;
+    public int how_exp = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +31,13 @@ public class PlayerAttr : MonoBehaviour
     }
 
     void LevelUp(){
+        //xpBar.SetExp(0);
         int health_up = health/4;
         int percent_health = health/5;
         Debug.Log("LEVEL_UP");
         how_exp *= 2;
+        //xpBar.SetMaxExp(how_exp);
+
         exp = 0;
         health += health_up;
         if(current_health + percent_health >= health){
