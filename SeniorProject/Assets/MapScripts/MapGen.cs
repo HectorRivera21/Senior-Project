@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MapGen : MonoBehaviour
 {
-    // 1 Bot Door, 2 Top Door, 3 Left Door, 4 Right Door 
+    // 1 Bot Door, 2 Top Door, 3 Left Door, 4 Right Door]
     public int doorDirection;
 
     private RoomTemps templates;
@@ -48,9 +48,10 @@ public class MapGen : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("SpawnPoint"))
+        if (other.CompareTag("SpawnPoint")&& !other.CompareTag("player"))
         {
-            if(other.GetComponent<MapGen>().isSpawned == false && isSpawned == false)
+            MapGen otherMapGen = other.GetComponent<MapGen>();
+            if (otherMapGen != null && otherMapGen.isSpawned == false && isSpawned == false)
             {
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
                 Destroy(gameObject);

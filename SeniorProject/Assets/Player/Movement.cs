@@ -7,61 +7,70 @@ using UnityEngine.EventSystems;
 
 public class Movement : MonoBehaviour
 {
-    public float move_speed = 5f;
-    public float teleport_distance = 5f;
-    public float teleport_cooldown = 3f;
-    private float teleport_active = 0;
-    private Vector2 move_direction;
-   // private bool is_tp = false;
+    public float moveSpeed;
     public Rigidbody2D rb;
+    private Vector2 moveDirection;
 
-     void Update() {
-        proccessInputs();
+    private float activeMoveSpeed;
+    public float dashSpeed;
+    public float dashLength = .5f;
+    public float dashCooldown = 1f;
+
+    private float dashCounter;
+    private float dashCoolCounter;
+
+    private void Start()
+    {
+        activeMoveSpeed = moveSpeed;
     }
-    void FixedUpdate() {
 
-        teleport_active -= Time.deltaTime;
+    private void Update()
+    {
+        ProcressInputs();
 
-        // Check if the timer has reached zero
-        if (teleport_active <= 0f && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Timer has expired, perform actions here
-            Debug.Log("Timer has reached zero!");
-
-            // Reset the timer for repeated use
-            teleport_active = teleport_cooldown;
-            TeleportPlayer();
+            if (dashCoolCounter <=0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+            }
         }
 
-        move();
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+
+            if (dashCounter <= 0)
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCoolCounter = dashCooldown;
+            }
+        }
+
+        if (dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime; 
+        }
+
     }
 
-    void proccessInputs(){
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    void ProcressInputs()
+    {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        move_direction = new Vector2(moveX,moveY).normalized;
-        // move_direction = new Vector2(moveX,moveY).normalized;
+        moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
-    void move(){
-        rb.velocity = new Vector2(move_direction.x * move_speed, move_direction.y * move_speed);
-        
-    }
-
-    void TeleportPlayer()
+    private void Move()
     {
-        // Get the current player position and rotation
-        Vector2 currentPosition = transform.position;
-
-        // Calculate the teleport destination
-        Vector2 teleportDestination = currentPosition + move_direction * teleport_distance;
-
-        // Teleport the player to the destination
-        transform.position = teleportDestination;
-
-        
-
-        Debug.Log("Player teleported to: " + teleportDestination);
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
+
 }

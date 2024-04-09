@@ -5,10 +5,24 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemies
-  - SpawnPoint
+  - NPC
+  - PlayerHitBox
   - Rooms
+<<<<<<< HEAD
   - Item
   - Bosses
+=======
+  - player
+  - SpawnPoint
+  - Wall
+  - Locked Door
+  - Normal Door
+  - E_HitBox
+  - DoorL
+  - DoorR
+  - DoorU
+  - DoorD
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

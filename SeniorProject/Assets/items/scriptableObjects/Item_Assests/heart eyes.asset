@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea834a051f952b14eab9cae0daa6f38b, type: 3}
   m_Name: heart eyes
   m_EditorClassIdentifier: 
-  name: heart eyes
+  itemName: HeatEyes
   description: extra health
   art: {fileID: 21300000, guid: 69e63be8bfef98246af291fc30b63f2f, type: 3}
