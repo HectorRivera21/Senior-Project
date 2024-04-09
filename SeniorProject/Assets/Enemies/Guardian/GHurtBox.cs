@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class E_hurtBox : MonoBehaviour
+
+public class GHurtBox : MonoBehaviour
 {
     // GameObject enemy;
     public float k_force;
@@ -11,7 +12,7 @@ public class E_hurtBox : MonoBehaviour
     float blinking_red = 1f;
     bool is_hit = false;
 
-    SlimeSfx slime_sounds;
+    GuardianSfx guardian_sounds;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class E_hurtBox : MonoBehaviour
         e_health = gameObject.GetComponentInParent<check>().health;
         sprite_e = gameObject.GetComponentInParent<SpriteRenderer>();
         currentColor = sprite_e.color;
-        slime_sounds = GetComponentInParent<SlimeSfx>();
+        guardian_sounds = GetComponentInParent<GuardianSfx>();
         // Debug.Log("Starting e_health " + e_health);
     }
 
@@ -43,7 +44,7 @@ public class E_hurtBox : MonoBehaviour
      private void OnTriggerEnter2D(Collider2D other) {
         // Debug.Log(other);
         if(other.tag == "PlayerHitBox"){
-            slime_sounds.SlimeHit();
+            guardian_sounds.GuardianHit();
             is_hit = true;
             int damage = other.GetComponentInParent<PlayerAttr>().damage;
             gameObject.GetComponentInParent<check>().e_damage(damage);

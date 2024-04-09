@@ -94,7 +94,7 @@ public class PlayerAnimation : MonoBehaviour
             // attackAni.Nothing();
         }
 
-        if(Input.GetKeyUp(KeyCode.Mouse0) && attack_cooldown < 0){
+        if(Input.GetKeyUp(KeyCode.Space) && attack_cooldown < 0){
             PlayAttack(last_input);
             attack_cooldown = 1f;
         }

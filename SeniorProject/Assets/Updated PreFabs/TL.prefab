@@ -2221,6 +2221,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[6].second.m_TileSpriteIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5009533797701422187, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920614322614936626, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}
 --- !u!1 &5466790529000130493 stripped
