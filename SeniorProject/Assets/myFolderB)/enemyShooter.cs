@@ -12,22 +12,18 @@ public class enemyShooter : MonoBehaviour
 
     private float timer;
     private GameObject player;
-    void Start()
-    {
+    void Start(){
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+ 
+    void Update(){
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distance < 10)
-        {
+        if (distance < 10){
             timer += Time.deltaTime;
 
-            if (timer > 2)
-            {
+            if (timer > 2){
                 timer = 0;
                 shoot();
             }
@@ -36,8 +32,7 @@ public class enemyShooter : MonoBehaviour
 
     }
 
-    void shoot()
-    {
+    void shoot(){
         Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(bulletPos.up * fireForce, ForceMode2D.Impulse);
     }

@@ -11,35 +11,29 @@ public class enemyChase : MonoBehaviour
 
     private bool isChasing = false;
 
-    void Start()
-    {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    void Start(){
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerTransform = playerObject.transform;   
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, playerTransform.position) <= chaseRadius)
-        {
+        if (Vector3.Distance(transform.position, playerTransform.position) <= chaseRadius){
             isChasing = true;
         }
-        else
-        {
+        else{
             isChasing = false;
         }
 
-        if (isChasing)
-        {
+        if (isChasing){
             Vector3 direction = (playerTransform.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("Player")){
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
+            if (playerHealth != null){
                 playerHealth.TakeDamage(damageAmount);
             }
         }

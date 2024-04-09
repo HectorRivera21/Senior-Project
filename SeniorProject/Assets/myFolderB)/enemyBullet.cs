@@ -35,14 +35,10 @@ public class enemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-
-        if (timer > 5)
-        {
+        if (timer > 5){
             Destroy(gameObject);
         }
     }

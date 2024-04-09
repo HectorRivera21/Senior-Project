@@ -28,12 +28,10 @@ public class playerBullet : MonoBehaviour
         }
     }
 
-    void Update()
-    {
+    void Update(){
         timer += Time.deltaTime;
 
-        if (timer > 5)
-        {
+        if (timer > 5){
             Destroy(gameObject);
         }
     }

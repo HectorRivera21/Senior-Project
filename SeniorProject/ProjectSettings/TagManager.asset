@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - Rooms
   - Item
+  - Bosses
   layers:
   - Default
   - TransparentFX
