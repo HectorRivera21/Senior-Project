@@ -18,6 +18,7 @@ TagManager:
   - DoorR
   - DoorU
   - DoorD
+  - AreRooms
   layers:
   - Default
   - TransparentFX
