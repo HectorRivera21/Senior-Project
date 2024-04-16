@@ -8,6 +8,8 @@ public class check : MonoBehaviour
     public enemeis me;
     public int health;
 
+    public ExpBar xpBar;
+
     PlayerAttr player;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,9 @@ public class check : MonoBehaviour
     }
 
     void exp(){
+        xpBar.SetMaxExp(player.how_exp);
         player.exp += me.exp;
+        xpBar.SetExp(player.exp);
         //Debug.Log( "EXP" + player.exp);
     }
 }

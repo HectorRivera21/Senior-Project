@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Enemies
   - NPC
@@ -19,6 +20,9 @@ TagManager:
   - DoorU
   - DoorD
   - AreRooms
+=======
+  tags: []
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
