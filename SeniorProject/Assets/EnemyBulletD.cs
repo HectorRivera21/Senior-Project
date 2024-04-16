@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class EnemyBullet : MonoBehaviour
+public class EnemyBulletD : MonoBehaviour
 {
     // public float speed;
     private Transform target;

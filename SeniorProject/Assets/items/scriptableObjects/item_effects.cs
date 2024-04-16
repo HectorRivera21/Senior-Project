@@ -8,6 +8,8 @@ public class item_effects : MonoBehaviour
     private GameObject target;
     Player_items player_Items;
     private boots myBoots;
+
+
     private void Awake(){
         // myItem = gameObject.GetComponent<items>();
         target = GameObject.FindGameObjectWithTag("Player");
@@ -21,6 +23,7 @@ public class item_effects : MonoBehaviour
         if(other.name == target.name){
             Debug.Log("IT WORKS");
             Debug.Log(gameObject);
+            Debug.Log(myItem.itemName);
             // player_Items.AddItem(theItem);
             myBoots.IncreaseSpeed();
             Destroy(gameObject);
