@@ -50,7 +50,8 @@ public class UI_Shop : MonoBehaviour
         if(myPlayer.gold < cost){
             Debug.Log("Not enough gold");
         } else {
-
+            gameObject.GetComponentInChildren<DropItem>().Instant_Drop();
+            myPlayer.gold = myPlayer.gold - cost; 
         }
     }
 
