@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5066617666903844347}
   - component: {fileID: 1383519436994678322}
   - component: {fileID: 1250372764442854014}
-  - component: {fileID: 4158703100517228278}
   - component: {fileID: 3149304312451574859}
   - component: {fileID: -3916096244931898772}
+  - component: {fileID: 3940137897195139471}
   m_Layer: 0
   m_Name: enemy_bullet
   m_TagString: E_HitBox
@@ -104,22 +104,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4158703100517228278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015762849235116986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f22fd73ecb42f943bd8855a07aa1d3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 2
-  k_force: 100000
-  dead_timer: 4
-  damage: 3
 --- !u!50 &3149304312451574859
 Rigidbody2D:
   serializedVersion: 4
@@ -153,3 +137,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9046646edf679e4796d1655f2551b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3940137897195139471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015762849235116986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f22fd73ecb42f943bd8855a07aa1d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 3
+  k_force: 500000
+  dead_timer: 2
+  damage: 2

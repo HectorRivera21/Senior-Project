@@ -291,8 +291,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &97451460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,7 +519,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
->>>>>>> main
+
 --- !u!1 &165733971
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,8 +681,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7396059751300408510, guid: b040d66e033eb7b40ae867920a89d470, type: 3}
   m_PrefabInstance: {fileID: 1432750969}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &462348528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -908,7 +906,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493533716}
   m_CullTransparentMesh: 1
->>>>>>> main
+
 --- !u!1 &552947040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,8 +2536,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623038184}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &1699748283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2633,7 +2630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f94fd91e66a9476478848e1a516367aa, type: 3}
->>>>>>> main
+
 --- !u!1 &1702324004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,17 +3647,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime_work (1)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
+
     - target: {fileID: 1257893304084349520, guid: c2618d8c0524113488f7bf9c389a1d29, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-=======
+
     - target: {fileID: 1257893304084349529, guid: c2618d8c0524113488f7bf9c389a1d29, type: 3}
       propertyPath: xpBar
       value: 
       objectReference: {fileID: 116227620}
->>>>>>> main
+
     - target: {fileID: 1257893304084349532, guid: c2618d8c0524113488f7bf9c389a1d29, type: 3}
       propertyPath: m_RootOrder
       value: 6
