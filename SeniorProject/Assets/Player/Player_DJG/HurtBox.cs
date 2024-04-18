@@ -28,6 +28,7 @@ public class HurtBox : MonoBehaviour
         my_rb = gameObject.GetComponentInParent<Rigidbody2D>();
         player_sounds = GetComponentInParent<PlayerSfx>();
         Time.timeScale = 1f;
+        // Debug.Log("Space in object for hurtbox: " + gameObject.transform.localPosition);
     }
 
     // Update is called once per frame

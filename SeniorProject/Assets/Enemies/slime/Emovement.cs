@@ -29,7 +29,7 @@ public class Emovement : MonoBehaviour
 
     // Start is called before the first frame update
 
-    void Start()
+    void Awake()
     {
         m_target = GameObject.Find("PlayerTest").GetComponent<Transform>();
     }
@@ -47,6 +47,7 @@ public class Emovement : MonoBehaviour
             Vector2 direction = (m_target.position - transform.position).normalized;
             // Apply force in that direction
             gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(direction.x * speed, direction.y * speed);
+            
         }
         
     }

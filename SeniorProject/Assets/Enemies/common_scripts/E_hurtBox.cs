@@ -57,7 +57,7 @@ public class E_hurtBox : MonoBehaviour
         // offset the collsion for knockback
         Vector2 direction = (transform.position - enemy.transform.position).normalized;
         //knockback is in direcrtion
-        Vector2 knockback = direction * k_force; 
+        Vector2 knockback = direction * (k_force* 10); 
         // Debug.Log("DIRECTION: " + direction);
         gameObject.GetComponentInParent<Rigidbody2D>().AddForce(knockback);
     }
