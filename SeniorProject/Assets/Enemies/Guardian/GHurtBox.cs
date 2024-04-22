@@ -43,7 +43,7 @@ public class GHurtBox : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D other) {
         // Debug.Log(other);
-        if(other.tag == "PlayerHitBox"){
+        if(other.tag == "Player"){
             guardian_sounds.GuardianHit();
             is_hit = true;
             int damage = other.GetComponentInParent<PlayerAttr>().damage;
