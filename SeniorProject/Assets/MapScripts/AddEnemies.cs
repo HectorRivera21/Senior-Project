@@ -5,7 +5,7 @@ using UnityEngine;
 public class AddEnemies : MonoBehaviour
 {
     private RoomTemps temps;
-    void Update()
+    void Start()
     {
         temps = GameObject.FindGameObjectWithTag("Enemies").GetComponent<RoomTemps>();
         temps.enemies.Add(this.gameObject);
