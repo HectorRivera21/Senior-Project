@@ -10,9 +10,10 @@ public class UI_Shop : MonoBehaviour
     private Transform shopItemTemplate;
     public items myItemBoot;
     public items myItemHeart;
+    public items myItemSword;
+    private items boughtItem;
 
     public PlayerAttr myPlayer;
-   
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class UI_Shop : MonoBehaviour
     {
         CreateItemButton(myItemBoot.art, myItemBoot.itemName, myItemBoot.itemCost, 0);
         CreateItemButton(myItemHeart.art, myItemHeart.itemName, myItemHeart.itemCost, 1);
+        CreateItemButton(myItemSword.art, myItemSword.itemName, myItemSword.itemCost, 2);
     }
 
     private void CreateItemButton(Sprite itemSprite, string itemName, int itemCost, int positionIndex)
@@ -46,11 +48,11 @@ public class UI_Shop : MonoBehaviour
     }
 
     public void TryBuyItem(int cost, string name){
-        Debug.Log(cost);
+        Debug.Log(name);
         if(myPlayer.gold < cost){
             Debug.Log("Not enough gold");
         } else {
-            gameObject.GetComponentInChildren<DropItem>().Instant_Drop();
+            gameObject.GetComponentInChildren<DropItem>().Instant_Drop(name);
             myPlayer.gold = myPlayer.gold - cost; 
         }
     }
