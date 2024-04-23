@@ -12,10 +12,11 @@ public class check : MonoBehaviour
 
     PlayerAttr player;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponentInParent<PlayerAttr>();
         health = me.health;
+        xpBar = GameObject.Find("ExpBar").GetComponent<ExpBar>();
         //Debug.Log("Starting e_ health " + health);
     }
 
@@ -26,6 +27,8 @@ public class check : MonoBehaviour
             //Debug.Log("DESTROYING OBJ");
             gameObject.GetComponentInChildren<DropItem>().Drop_Item();
             player.gold += me.gold_drop;
+            player.enemiesToKilled -= 1;
+            player.enemiesKilled += 1;
             Destroy(gameObject);
         }
     }
