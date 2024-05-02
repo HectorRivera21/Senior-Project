@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+
 
 public class PlayerAnimation : MonoBehaviour
 {
     // AttackStricpt
     SlashAttackAnimation attackAni;
-
-
     //physics
     public bool _disablePlayerMove;
     private bool _isLeft;
@@ -34,6 +34,8 @@ public class PlayerAnimation : MonoBehaviour
 
     string last_input = "";
 
+    private Inventory inventory;
+
 
     private void Start() {
         _animator = gameObject.GetComponent<Animator>();
@@ -41,7 +43,8 @@ public class PlayerAnimation : MonoBehaviour
         _isRight = true;
         _isLeft = false;
         _is_idle = false;
-        
+
+        inventory = new Inventory();
     }
 
 
