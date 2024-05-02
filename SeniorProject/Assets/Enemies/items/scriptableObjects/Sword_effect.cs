@@ -7,6 +7,7 @@ public class Sword_effect : MonoBehaviour
     public items myItem;
     private GameObject target;
     Player_items player_Items;
+    PlayerHitBox playerHitBox;
 
     private boots myBoots;
 
@@ -15,6 +16,7 @@ public class Sword_effect : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
         player_Items = target.GetComponent<Player_items>();
         myBoots = gameObject.GetComponent<boots>();
+        playerHitBox = target.GetComponentInChildren<PlayerHitBox>();
         // Debug.Log("OBJ NAME : " + myItem.name);
     }
 

@@ -14,6 +14,10 @@ public class PlayerAttr : MonoBehaviour
     public int enemiesKilled = 0;
     public int enemiesToKilled = 0;
 
+
+    public bool range_attack = false;
+    public int How_many_bullets = 0;
+
     //ExpBar xpBar;
 
     public int how_exp = 5;

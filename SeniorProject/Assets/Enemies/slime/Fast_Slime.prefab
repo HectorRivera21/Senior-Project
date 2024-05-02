@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  direction: {x: 0, y: 0}
 --- !u!95 &7401750172460685750
 Animator:
   serializedVersion: 4
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   me: {fileID: 11400000, guid: 77ce71a264547ff4ab271dfb2ab0e304, type: 2}
   health: 0
+  xpBar: {fileID: 0}
 --- !u!114 &7401750172460685748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2291b78d923b55b4d993439c122c0d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  spawnItem1: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  spawnItem2: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
+  spawnItem3: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
+  myPlayer: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!50 &6070973053201993028
 Rigidbody2D:
   serializedVersion: 4
@@ -259,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6b13dbf9f963149b3ea3f0d0d3f0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime_damage: {fileID: 8300000, guid: d9457ab9e5b0a6a47b0cff5a0143ba40, type: 3}
+  slime_damage: {fileID: 8300000, guid: cbbfe4f98044c3440b4c23281ee196a2, type: 3}
 --- !u!82 &549665790066335452
 AudioSource:
   m_ObjectHideFlags: 0
