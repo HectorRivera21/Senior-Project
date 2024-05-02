@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rooms
+  - AreRooms
+  - SpawnPoint
+  - Wall
+  - Normal Door
+  - Locked Door
+  - PlayerHitBox
+  - Enemies
+  - DoorR
+  - DoorD
+  - DoorU
+  - DoorL
+  - E_HitBox
+  - PlayerBullet
+  - PlayerHurtBox
   layers:
   - Default
   - TransparentFX
@@ -11,8 +26,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - PlayerBullet
+  - Player
   - 
   - 
   - 

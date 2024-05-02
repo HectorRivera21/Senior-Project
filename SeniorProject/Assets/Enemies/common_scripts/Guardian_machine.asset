@@ -15,7 +15,7 @@ MonoBehaviour:
   e_name: Guardian_Machine
   description: pew pew pew
   art: {fileID: 0}
-  health: 10
+  health: 8
   damage: 2
   gold_drop: 15
   exp: 15

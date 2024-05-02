@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class DefeatedRoom : MonoBehaviour
 {
+    public bool has_changed = false;
     PlayerAttr playerAttr;
     // Start is called before the first frame update
     void Awake()
@@ -16,15 +18,13 @@ public class DefeatedRoom : MonoBehaviour
     void FixedUpdate()
     {
         // SetChildrenCollidersToTrigger(true);
-        if(playerAttr.enemiesToKilled == 0){
+        if(playerAttr.enemiesToKilled == 0 && has_changed == false){
             SetChildrenCollidersToTrigger(true);
-        }
-        else{
-            SetChildrenCollidersToTrigger(false);
+            has_changed = true;
         }
     }
 
-    private void SetChildrenCollidersToTrigger(bool isTrigger)
+    public void SetChildrenCollidersToTrigger(bool isTrigger)
     {
         // Get all child GameObjects
         foreach (Transform child in transform)
@@ -36,9 +36,9 @@ public class DefeatedRoom : MonoBehaviour
             if (childCollider != null)
             {
                 // Change the collider's isTrigger property
-                //Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
+                // Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
                 childCollider.isTrigger = isTrigger;
-                //Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
+                // Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
             }
         }
     }
