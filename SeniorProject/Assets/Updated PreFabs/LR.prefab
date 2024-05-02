@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 3
+  waitTime: 4
 --- !u!1 &1442174533054866
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 4
+  waitTime: 4
 --- !u!1 &1784612515466346
 GameObject:
   m_ObjectHideFlags: 0

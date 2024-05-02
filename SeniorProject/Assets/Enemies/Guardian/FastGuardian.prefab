@@ -333,10 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2291b78d923b55b4d993439c122c0d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItem1: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
-  spawnItem2: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
-  spawnItem3: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
-  spawnItem4: {fileID: 0}
+  spawnItem: {fileID: 0}
+  bootItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  heartItem: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
+  swordItem: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
   myPlayer: {fileID: 0}
   playerTransform: {fileID: 0}
 --- !u!114 &5611374816169276656

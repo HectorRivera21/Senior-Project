@@ -47,5 +47,11 @@ public class Doors : MonoBehaviour
             player.transform.position = new Vector3(player_posx + player_offset.x, player_posy + player_offset.y, player.transform.position.z);
             // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + camera_offset.x, Camera.main.transform.position.y + camera_offset.y, Camera.main.transform.position.z);
         }
+        else
+        {
+            float player_posx = player.transform.position.x;
+            float player_posy = player.transform.position.y;
+            player.transform.position = new Vector3(player_posx + -3, player_posy + -3, player.transform.position.z);
+        }
     }
 }

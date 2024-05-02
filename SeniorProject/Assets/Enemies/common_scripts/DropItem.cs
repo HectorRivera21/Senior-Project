@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
-    public GameObject spawnItem1;
-    public GameObject spawnItem2;
-    public GameObject spawnItem3;
 
+    public GameObject spawnItem;
+    public GameObject bootItem;
+    public GameObject heartItem;
+    public GameObject swordItem;
     public PlayerAttr myPlayer;
     public Transform playerTransform;
     GameObject E_enemy;
@@ -43,13 +45,13 @@ public class DropItem : MonoBehaviour
             // Debug.Log("Drop item");
             switch(irandom){
             case 0:
-                Instantiate(spawnItem1, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(bootItem, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
                 break;
             case 1:
-                Instantiate(spawnItem2, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(heartItem, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
                 break;
             case 2:
-                Instantiate(spawnItem3, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
+                Instantiate(swordItem, new Vector3 (transform.position.x,transform.position.y, transform.position.z), transform.rotation);
                 break;
             default:
                 UnityEngine.Debug.Log("couldnt spawn items");
@@ -59,9 +61,26 @@ public class DropItem : MonoBehaviour
         }
     }
 
-    public void Instant_Drop(){
-        Vector3 spawnPosition = playerClone.transform.position + (Vector3.right * 3f);
-        Instantiate(spawnItem1, spawnPosition, Quaternion.identity);
+    // public void Instant_Drop1(){
+    //     Vector3 spawnPosition = playerClone.transform.position + (Vector3.right * 3f);
+    //     Instantiate(spawnItem1, spawnPosition, Quaternion.identity);
+    // }
+    public void Instant_Drop(string name){
+        Vector3 spawnPosition = myPlayer.transform.position + (Vector3.right * 3f);
+        switch(name){
+        case "Boots Of Swiftness":
+            Instantiate(bootItem, spawnPosition, transform.rotation);
+            break;
+        case "Heart of Healing":
+            Instantiate(heartItem, spawnPosition, Quaternion.identity);
+            break;
+        case "Sword of Power":
+            Instantiate(swordItem, spawnPosition, Quaternion.identity);
+            break;
+        default:
+            UnityEngine.Debug.Log("testing shop");
+            break;
+        }
     }
 
     public void SetPlayerClone(GameObject clone)
