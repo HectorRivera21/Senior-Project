@@ -18,6 +18,7 @@ public class DamianMovement : MonoBehaviour
 
     void Start() {
         _spawnE = gameObject.GetComponent<SpawnE>(); 
+        // Debug.Log("Local space: " + gameObject.transform.position);
     }
 
      void Update() {

@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+
 
 public class PlayerAnimation : MonoBehaviour
 {
     // AttackStricpt
     SlashAttackAnimation attackAni;
-
-
     //physics
     public bool _disablePlayerMove;
     private bool _isLeft;
@@ -30,9 +30,14 @@ public class PlayerAnimation : MonoBehaviour
     const string PLAYER_UPRUN = "Player_UpRun";
     const string PLAYER_DOWNRUN = "Player_Down";
 
+    const string PLAYER_IDLEUP = "IdleUp";
+    const string PLAYER_IDLEDOWN = "IdleDown";
+
     float attack_cooldown = 1f;
 
     string last_input = "";
+
+    private Inventory inventory;
 
 
     private void Start() {
@@ -41,7 +46,8 @@ public class PlayerAnimation : MonoBehaviour
         _isRight = true;
         _isLeft = false;
         _is_idle = false;
-        
+
+        inventory = new Inventory();
     }
 
 
@@ -90,7 +96,16 @@ public class PlayerAnimation : MonoBehaviour
         else{
             _is_idle = true;
             // Debug.Log("standing");
-            ChangeAnimationState(PLAYER_IDLE);
+            if(last_input == "s"){
+                ChangeAnimationState(PLAYER_IDLEDOWN);
+            }
+            else if(last_input == "w"){
+                ChangeAnimationState(PLAYER_IDLEUP);
+            }
+            else{
+                ChangeAnimationState(PLAYER_IDLE);
+            }
+            // ChangeAnimationState(PLAYER_IDLE);
             // attackAni.Nothing();
         }
 

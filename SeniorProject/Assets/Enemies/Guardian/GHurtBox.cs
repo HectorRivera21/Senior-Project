@@ -52,6 +52,11 @@ public class GHurtBox : MonoBehaviour
             Debug.Log("Enemey " + e_health);
             AddingKnockBack(other.gameObject);
         }
+        else if(other.tag == "PlayerBullet"){
+            guardian_sounds.GuardianHit();
+            is_hit = true;
+            int damage = other.GetComponent<PlayerBullet>().damage;
+        }
     }
     // fix knockback on enemies
     private void AddingKnockBack(GameObject enemy){

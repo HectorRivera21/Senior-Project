@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc3ef0e9544f464bb61b318f0f90aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 100
+  knockbackForce: 50
 --- !u!1 &3042422958981638363
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee6691116be03e459bee751830b1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  k_force: 500000
+  k_force: 1000000
 --- !u!1 &3042422959149064635
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,8 +224,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042422959406267357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.08, y: -1.85, z: 0}
-  m_LocalScale: {x: 0.519819, y: 0.46235445, z: 1}
+  m_LocalPosition: {x: 9.08, y: -1.85, z: -0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3042422959149064632}
@@ -298,7 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13da05d3a2ea2546af12c6796e36acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
+  direction: {x: 0, y: 0}
 --- !u!95 &3042422959406267351
 Animator:
   serializedVersion: 4
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   me: {fileID: 11400000, guid: 30f744dacb4e53c42b6c07d0e2530680, type: 2}
   health: 0
+  xpBar: {fileID: 0}
 --- !u!114 &3042422959406267349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +347,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2291b78d923b55b4d993439c122c0d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  spawnItem: {fileID: 0}
+  bootItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  heartItem: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
+  swordItem: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
+  myPlayer: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!50 &1783701209257963301
 Rigidbody2D:
   serializedVersion: 4
@@ -379,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6b13dbf9f963149b3ea3f0d0d3f0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime_damage: {fileID: 8300000, guid: d9457ab9e5b0a6a47b0cff5a0143ba40, type: 3}
+  slime_damage: {fileID: 8300000, guid: cbbfe4f98044c3440b4c23281ee196a2, type: 3}
 --- !u!82 &5413424610853338301
 AudioSource:
   m_ObjectHideFlags: 0

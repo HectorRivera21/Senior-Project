@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7396059749695945125}
   - component: {fileID: 7396059749695945122}
   - component: {fileID: 7396059749695945127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7396059750911611028}
   - component: {fileID: 7396059750911611031}
   - component: {fileID: 7396059750911611030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HitBox
   m_TagString: PlayerHitBox
   m_Icon: {fileID: 0}
@@ -190,6 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ef6dfccfaf9f04eb70a8174522c1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  can_swing_time: 1
+  max_can_swing_time: 1
+  playerShoot: {fileID: 0}
 --- !u!1 &7396059751022479387
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +205,7 @@ GameObject:
   - component: {fileID: 7396059751022479388}
   - component: {fileID: 7396059751022479389}
   - component: {fileID: 7396059751022479391}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +309,7 @@ GameObject:
   - component: {fileID: 7396059751300408459}
   - component: {fileID: -4950292223106573807}
   - component: {fileID: -4006159980886055614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerTest
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -495,6 +498,12 @@ MonoBehaviour:
   current_health: 10
   damage: 2
   exp: 0
+  gold: 15
+  enemiesKilled: 0
+  enemiesToKilled: 0
+  range_attack: 0
+  How_many_bullets: 0
+  how_exp: 5
 --- !u!114 &7396059751300408456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,8 +531,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6edf4673b47fa40951c93524930ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime: {fileID: 3042422959406267357, guid: f94fd91e66a9476478848e1a516367aa, type: 3}
-  Gaurdian: {fileID: 1738313111079502782, guid: 26e43ff7f088f9e468fc8c599b0dc115, type: 3}
+  slime1: {fileID: 0}
+  slime2: {fileID: 0}
+  slime3: {fileID: 0}
+  Guardian1: {fileID: 0}
+  Guardian2: {fileID: 0}
+  Guardian3: {fileID: 0}
 --- !u!114 &-4950292223106573807
 MonoBehaviour:
   m_ObjectHideFlags: 0
