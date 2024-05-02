@@ -36,9 +36,9 @@ public class DefeatedRoom : MonoBehaviour
             if (childCollider != null)
             {
                 // Change the collider's isTrigger property
-                Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
+                //Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
                 childCollider.isTrigger = isTrigger;
-                Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
+                //Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
             }
         }
     }
