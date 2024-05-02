@@ -10,7 +10,7 @@ public class items : ScriptableObject {
     public Sprite art;
     public int itemCost;
    
-
+    public int amount;
     
 
 }
