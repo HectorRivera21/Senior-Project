@@ -14,6 +14,7 @@ public class PlayerAttr : MonoBehaviour
     public int gold = 0;
     public int enemiesKilled = 0;
     public int enemiesToKilled = 0;
+    public int how_many_romms = 0;
 
 
     public bool range_attack = false;

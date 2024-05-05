@@ -13,12 +13,10 @@ public class EnemiesSpawns : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnE = GetComponentInParent<SpawnE>();
         playerAttr = GameObject.FindWithTag("Player").GetComponent<PlayerAttr>();
         scripts = FindObjectsOfType<DefeatedRoom>();
         defeatedRoom = GameObject.FindWithTag("Normal Door").GetComponent<DefeatedRoom>();
-    //    Debug.Log(gameObject.name + " local spce:" + gameObject.transform.position); 
-        //StartCoroutine(SpawnEnemies());
+        spawnE = GetComponentInParent<SpawnE>();
     }
 
     // Update is called once per frame
@@ -31,6 +29,12 @@ public class EnemiesSpawns : MonoBehaviour
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(.5f);
+        if(playerAttr.how_many_romms % 3 == 0 && playerAttr.how_many_romms != 0){
+            spawnE.SpawnShop(new Vector3(0f,0f,0f),gameObject.transform.parent.position);
+            playerAttr.how_many_romms +=1;
+        }
+        else{
+
         
         for(int i=0; i<5;i++){
             float randomNumberx = Random.Range(-2f, 2f);
@@ -74,7 +78,10 @@ public class EnemiesSpawns : MonoBehaviour
             script.SetChildrenCollidersToTrigger(false);
             script.has_changed = false;
         }
+        playerAttr.how_many_romms +=1;
+        Debug.Log("Rooms cleard: " + playerAttr.how_many_romms);
         Debug.Log("Done spawning");
+        }
     }
 
 

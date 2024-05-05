@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 2
+  waitTime: 4
 --- !u!1 &1291089247763418
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorDirection: 4
+  waitTime: 4
 --- !u!1 &1170408203425256230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1325,7 @@ MonoBehaviour:
   Guardian1: {fileID: 1738313111079502782, guid: 26e43ff7f088f9e468fc8c599b0dc115, type: 3}
   Guardian2: {fileID: 5611374816169276664, guid: 5ed33149253eb5046b15b99287757af2, type: 3}
   Guardian3: {fileID: 6673199886623441587, guid: fadf80366f734354fbeb9e691187f1ca, type: 3}
+  shop: {fileID: 6751490072452583984, guid: 86372d2d5c07e20418b7a4f32fe17e24, type: 3}
 --- !u!1 &6909656975066021604
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08a60a1590c5b049adcdc41e503ddd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  has_changed: 0
 --- !u!4 &2953119036963377768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3018029347759248385, guid: a3746328843fe2c478ffdb824fbc86cd, type: 3}

@@ -20,10 +20,12 @@ public class UI_Shop : MonoBehaviour
         container = transform.Find("container");
         shopItemTemplate = container.Find("shopItemTemplate");
         shopItemTemplate.gameObject.SetActive(false);
+        
     }
 
     private void Start()
     {
+        myPlayer = GameObject.FindWithTag("Player").GetComponent<PlayerAttr>();
         CreateItemButton(myItemBoot.art, myItemBoot.itemName, myItemBoot.itemCost, 0);
         CreateItemButton(myItemHeart.art, myItemHeart.itemName, myItemHeart.itemCost, 1);
         CreateItemButton(myItemSword.art, myItemSword.itemName, myItemSword.itemCost, 2);
