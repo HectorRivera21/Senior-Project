@@ -7,7 +7,7 @@ public class DefeatedRoom : MonoBehaviour
 {
     public bool has_changed = false;
     PlayerAttr playerAttr;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         playerAttr = GameObject.FindWithTag("Player").GetComponent<PlayerAttr>();
@@ -36,9 +36,7 @@ public class DefeatedRoom : MonoBehaviour
             if (childCollider != null)
             {
                 // Change the collider's isTrigger property
-                // Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
                 childCollider.isTrigger = isTrigger;
-                // Debug.Log(childCollider.name + " trigger is :" + childCollider.isTrigger);
             }
         }
     }
