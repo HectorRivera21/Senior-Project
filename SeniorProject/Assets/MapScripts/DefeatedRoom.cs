@@ -21,6 +21,7 @@ public class DefeatedRoom : MonoBehaviour
         if(playerAttr.enemiesToKilled == 0 && has_changed == false){
             SetChildrenCollidersToTrigger(true);
             has_changed = true;
+            
         }
     }
 
