@@ -2493,18 +2493,15 @@ MonoBehaviour:
   - {fileID: 1144202486990382, guid: 96cbb82819b10f14eb4a551f8048e96c, type: 3}
   - {fileID: 1982205314345556, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
   - {fileID: 1857462433007770, guid: 8d3b3801dbf17644ea3541d229fa3c26, type: 3}
-  - {fileID: 7783760573183349491, guid: f64091e1f981a7a479398a3b41f8ed32, type: 3}
   rightRooms:
   - {fileID: 1709453575458850, guid: f19b4cd5436954c41adbd492ce5a8785, type: 3}
   - {fileID: 1633850058292698, guid: b3f2b155bf508e94cacdaa0c831817ee, type: 3}
   - {fileID: 1580888179356958, guid: 5bfb28fdf883df24f9ccc648eb33f0bc, type: 3}
   - {fileID: 1982205314345556, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
-  - {fileID: 7783760573183349491, guid: f64091e1f981a7a479398a3b41f8ed32, type: 3}
   closedRoom: {fileID: 1586528034238900, guid: 71addd1db0904154d960002486bf6a2b, type: 3}
   rooms: []
-  enemies: []
   waitTime: 7
-  boss: {fileID: 892941817764637387, guid: 122b8541de36a124cb0a29ae8a60ecac, type: 3}
+  boss: {fileID: 7198411311804575097, guid: 39fef6dc096f81a4eac1b307d061fc79, type: 3}
 --- !u!4 &1581551429
 Transform:
   m_ObjectHideFlags: 0
@@ -4969,6 +4966,18 @@ PrefabInstance:
       value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 255078984594651671, guid: 305ca301be774784998d159f3785d530, type: 3}
+      propertyPath: Guardian1
+      value: 
+      objectReference: {fileID: 3042422959406267357, guid: f94fd91e66a9476478848e1a516367aa, type: 3}
+    - target: {fileID: 255078984594651671, guid: 305ca301be774784998d159f3785d530, type: 3}
+      propertyPath: Guardian2
+      value: 
+      objectReference: {fileID: 3042422959406267357, guid: f94fd91e66a9476478848e1a516367aa, type: 3}
+    - target: {fileID: 255078984594651671, guid: 305ca301be774784998d159f3785d530, type: 3}
+      propertyPath: Guardian3
+      value: 
+      objectReference: {fileID: 3042422959406267357, guid: f94fd91e66a9476478848e1a516367aa, type: 3}
+    - target: {fileID: 255078984594651671, guid: 305ca301be774784998d159f3785d530, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -6486,7 +6495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292100195031948304, guid: 305ca301be774784998d159f3785d530, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6803656800320932909, guid: 305ca301be774784998d159f3785d530, type: 3}
       propertyPath: m_IsActive

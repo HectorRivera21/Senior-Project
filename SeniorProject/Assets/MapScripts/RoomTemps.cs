@@ -13,8 +13,6 @@ public class RoomTemps : MonoBehaviour
 
     public List<GameObject> rooms;
 
-    public List<GameObject> enemies;
-
     //boss room stuff
     public float waitTime;
     private bool spawnedBoss;
