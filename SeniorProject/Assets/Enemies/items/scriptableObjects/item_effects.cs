@@ -26,9 +26,9 @@ public class item_effects : MonoBehaviour
             Debug.Log(gameObject);
             Debug.Log(myItem.itemName);
             // player_Items.AddItem(theItem);
-            //myBoots.IncreaseSpeed();
-            items newItem = itemList[0];
-            Inventory.instance.AddItem(Instantiate(newItem));
+            myBoots.IncreaseSpeed();
+            //items newItem = itemList[0];
+            //Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);
         }
         // target

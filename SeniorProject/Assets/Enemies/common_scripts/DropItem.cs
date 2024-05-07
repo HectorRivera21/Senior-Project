@@ -12,6 +12,7 @@ public class DropItem : MonoBehaviour
     public GameObject bootItem;
     public GameObject heartItem;
     public GameObject swordItem;
+    public GameObject potItem;
     public PlayerAttr myPlayer;
     public Transform playerTransform;
     GameObject E_enemy;
@@ -77,6 +78,9 @@ public class DropItem : MonoBehaviour
             break;
         case "Sword of Power":
             Instantiate(swordItem, spawnPosition, Quaternion.identity);
+            break;
+        case "Potion of Healing":
+            Instantiate(potItem, spawnPosition, Quaternion.identity);
             break;
         default:
             UnityEngine.Debug.Log("testing shop");

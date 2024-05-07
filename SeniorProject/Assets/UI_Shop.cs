@@ -11,6 +11,7 @@ public class UI_Shop : MonoBehaviour
     public items myItemBoot;
     public items myItemHeart;
     public items myItemSword;
+    public items myItemPot;
     private items boughtItem;
 
     public PlayerAttr myPlayer;
@@ -29,6 +30,7 @@ public class UI_Shop : MonoBehaviour
         CreateItemButton(myItemBoot.art, myItemBoot.itemName, myItemBoot.itemCost, 0);
         CreateItemButton(myItemHeart.art, myItemHeart.itemName, myItemHeart.itemCost, 1);
         CreateItemButton(myItemSword.art, myItemSword.itemName, myItemSword.itemCost, 2);
+        CreateItemButton(myItemPot.art, myItemPot.itemName, myItemPot.itemCost, 3);
     }
 
     private void CreateItemButton(Sprite itemSprite, string itemName, int itemCost, int positionIndex)

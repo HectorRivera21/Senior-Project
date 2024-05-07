@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea834a051f952b14eab9cae0daa6f38b, type: 3}
   m_Name: Health Potion
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  art: {fileID: 0}
-  itemCost: 0
+  itemName: Potion of Healing
+  description: Heals player
+  art: {fileID: 21300000, guid: 2ea40567c68e9e348b6fd52da9029580, type: 3}
+  itemCost: 10
   amount: 0
