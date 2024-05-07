@@ -8,7 +8,7 @@ public class HealthPoton : MonoBehaviour
     public items myItem;
     private GameObject target;
     Player_items player_Items;
-
+    public List<items> itemList = new List<items>();
     private boots myBoots;
 
     private void Awake(){
@@ -24,7 +24,9 @@ public class HealthPoton : MonoBehaviour
         if(other.name == target.name){
             Debug.Log("IT WORKS");
             Debug.Log(gameObject);
-            myBoots.HeatlhGain();
+            //myBoots.HeatlhGain();
+            items newItem = itemList[0];
+            Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);
         }
         // target
