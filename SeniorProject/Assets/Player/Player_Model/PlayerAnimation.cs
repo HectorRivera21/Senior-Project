@@ -30,6 +30,9 @@ public class PlayerAnimation : MonoBehaviour
     const string PLAYER_UPRUN = "Player_UpRun";
     const string PLAYER_DOWNRUN = "Player_Down";
 
+    const string PLAYER_IDLEUP = "IdleUp";
+    const string PLAYER_IDLEDOWN = "IdleDown";
+
     float attack_cooldown = 1f;
 
     string last_input = "";
@@ -89,7 +92,16 @@ public class PlayerAnimation : MonoBehaviour
         else{
             _is_idle = true;
             // Debug.Log("standing");
-            ChangeAnimationState(PLAYER_IDLE);
+            if(last_input == "s"){
+                ChangeAnimationState(PLAYER_IDLEDOWN);
+            }
+            else if(last_input == "w"){
+                ChangeAnimationState(PLAYER_IDLEUP);
+            }
+            else{
+                ChangeAnimationState(PLAYER_IDLE);
+            }
+            // ChangeAnimationState(PLAYER_IDLE);
             // attackAni.Nothing();
         }
 

@@ -2,28 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyBullet : MonoBehaviour
-{
-    private GameObject player;
+public class enemyBullet : MonoBehaviour {
+
     private Rigidbody2D rb;
-    public float force;
+    public float speed = 10f;
+    private Vector3 targetPosition;
     private float timer;
     public int damage = 10;
 
-    void Start()
-    {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        targetPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-        Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        Vector3 direction = targetPosition - transform.position;
+        rb.velocity = direction.normalized * speed;
 
-        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+        float rot = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player"))
         {
             PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
@@ -35,12 +33,11 @@ public class enemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void Update()
-    {
+    void Update() {
         timer += Time.deltaTime;
-        if (timer > 5){
+        if (timer > 5)
+        {
             Destroy(gameObject);
         }
     }
-
 }

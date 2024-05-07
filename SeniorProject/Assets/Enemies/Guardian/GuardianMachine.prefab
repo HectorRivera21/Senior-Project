@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   me: {fileID: 11400000, guid: 8ef7c99482f8eb642b5b9aa10a30fbfc, type: 2}
   health: 0
+  xpBar: {fileID: 0}
 --- !u!114 &6673199886623441593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2291b78d923b55b4d993439c122c0d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  spawnItem: {fileID: 0}
+  bootItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
+  heartItem: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
+  swordItem: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
+  myPlayer: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!114 &6673199886623441595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7031e6ad4bffc594e83fca9b7878fa98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardian_damage: {fileID: 8300000, guid: d9457ab9e5b0a6a47b0cff5a0143ba40, type: 3}
+  guardian_damage: {fileID: 8300000, guid: b921264640fbe2048be7bba2bf571cf4, type: 3}
 --- !u!82 &4937156168305823427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -352,7 +358,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

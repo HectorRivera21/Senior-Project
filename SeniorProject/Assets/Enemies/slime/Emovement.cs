@@ -7,6 +7,8 @@ public class Emovement : MonoBehaviour
     public float speed;
     private Transform m_target;
 
+    public Vector2 direction;
+
     private void OnTriggerEnter2D(Collider2D other) {
         // m_target = GameObject.Find("PlayerTest").GetComponent<Transform>();
         if(other.name == "PlayerTest"){
@@ -35,7 +37,7 @@ public class Emovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(m_target != null){
             // transform.position = Vector2.MoveTowards(transform.position, m_target.position, speed * Time.deltaTime);
@@ -44,9 +46,14 @@ public class Emovement : MonoBehaviour
             // gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(m_target.position.x * 3 , m_target.position.y * 3);
 
             // Calculate the direction from enemy to player
-            Vector2 direction = (m_target.position - transform.position).normalized;
+            direction = (m_target.position - transform.position).normalized;
+            direction = direction.normalized;
             // Apply force in that direction
             gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(direction.x * speed, direction.y * speed);
+            
+
+
+            // transform.position += new Vector3 (direction.x * speed,direction.y * speed, 0f);
             
         }
         

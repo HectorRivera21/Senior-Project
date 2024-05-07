@@ -10,6 +10,7 @@ public class SpawnE : MonoBehaviour
     public GameObject Guardian1;
     public GameObject Guardian2;
     public GameObject Guardian3;
+    public GameObject shop;
     // Start is called before the first frame update
     void Start()
     {   
@@ -58,5 +59,10 @@ public class SpawnE : MonoBehaviour
         Vector3 spawnPos = pos;
         GameObject newObject = Instantiate(Guardian3, spawnPos, Quaternion.identity);
         Debug.Log("Guardian3");
+    }
+    public void SpawnShop(Vector3 pos, Vector3 currentpos){
+        pos += currentpos;
+        Vector3 spawnPos = pos;
+        GameObject newObject = Instantiate(shop, spawnPos, Quaternion.identity);
     }
 }

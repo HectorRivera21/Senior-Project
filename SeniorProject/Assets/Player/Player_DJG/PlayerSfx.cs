@@ -15,18 +15,18 @@ public class PlayerSfx : MonoBehaviour
    }
 
     public void PlayerDeath(){
-        Debug.Log("DEATH SOUND");
+        // Debug.Log("DEATH SOUND");
         src.clip = PlayerDeathSound;
         src.Play();
     }
 
     public void PlayerHit(){
-        Debug.Log("Oowch");
+        // Debug.Log("Oowch");
         src.clip = PlayerHitSound;
         src.Play();
     }
     public void PlayerSwoosh(){
-        Debug.Log("SWOOOSH");
+        // Debug.Log("SWOOOSH");
         src.clip = SwooshSound;
         src.Play();
     }

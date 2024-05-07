@@ -8,21 +8,19 @@ public class EnemiesSpawns : MonoBehaviour
     bool have_spawn =false;
     SpawnE spawnE;
     PlayerAttr playerAttr;
+    DefeatedRoom defeatedRoom;
+    DefeatedRoom[] scripts;
     // Start is called before the first frame update
     void Start()
     {
-        spawnE = GetComponentInParent<SpawnE>();
         playerAttr = GameObject.FindWithTag("Player").GetComponent<PlayerAttr>();
-    //    Debug.Log(gameObject.name + " local spce:" + gameObject.transform.position); 
-        //StartCoroutine(SpawnEnemies());
+        scripts = FindObjectsOfType<DefeatedRoom>();
+        defeatedRoom = GameObject.FindWithTag("Normal Door").GetComponent<DefeatedRoom>();
+        spawnE = GetComponentInParent<SpawnE>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+ 
     IEnumerator SpawnEnemies()
     {
         Debug.Log("waiting");
@@ -31,6 +29,13 @@ public class EnemiesSpawns : MonoBehaviour
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(.5f);
+        if(playerAttr.how_many_romms % 3 == 0 && playerAttr.how_many_romms != 0){
+            spawnE.SpawnShop(new Vector3(0f,0f,0f),gameObject.transform.parent.position);
+            playerAttr.how_many_romms +=1;
+        }
+        else{
+
+        
         for(int i=0; i<5;i++){
             float randomNumberx = Random.Range(-2f, 2f);
             float randomNumbery = Random.Range(-2f, 2f);
@@ -67,8 +72,16 @@ public class EnemiesSpawns : MonoBehaviour
             // spawnE.SpawnSlime1(new Vector3(randomNumberx,randomNumbery, 0f), gameObject.transform.parent.position);
         }
         // spawnE.SpawnSlime(new Vector3(randomNumberx,randomNumbery, 0f), gameObject.transform.parent.position);
-
+        foreach (DefeatedRoom script in scripts)
+        {
+            // Access or modify properties or methods of each script
+            script.SetChildrenCollidersToTrigger(false);
+            script.has_changed = false;
+        }
+        playerAttr.how_many_romms +=1;
+        Debug.Log("Rooms cleard: " + playerAttr.how_many_romms);
         Debug.Log("Done spawning");
+        }
     }
 
 
@@ -80,4 +93,6 @@ public class EnemiesSpawns : MonoBehaviour
             have_spawn = true;
         }
     }
+
+    
 }
