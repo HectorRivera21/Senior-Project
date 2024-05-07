@@ -14,6 +14,7 @@ public class PlayerAttr : MonoBehaviour
     public int gold = 0;
     public int enemiesKilled = 0;
     public int enemiesToKilled = 0;
+   
     public int how_many_romms = 0;
 
 
@@ -26,9 +27,8 @@ public class PlayerAttr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
 
     // Update is called once per frame
     void Update()
