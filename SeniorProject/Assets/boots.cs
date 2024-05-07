@@ -37,4 +37,8 @@ public class boots : MonoBehaviour
         playerAttr.How_many_bullets += 1;
         Debug.Log("Adding Attack Speed: " + playerHitBox.max_can_swing_time);
     }
+    public void HeatlhGain(){
+        playerAttr.health += 5;
+        Debug.Log("Gaining health" + playerAttr.current_health);
+    }
 }
