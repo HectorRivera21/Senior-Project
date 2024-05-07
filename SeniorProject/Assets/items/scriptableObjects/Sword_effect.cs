@@ -9,6 +9,7 @@ public class Sword_effect : MonoBehaviour
     Player_items player_Items;
 
     private boots myBoots;
+    public List<items> itemList = new List<items>();
 
     private void Awake(){
         // myItem = gameObject.GetComponent<items>();
@@ -23,7 +24,9 @@ public class Sword_effect : MonoBehaviour
         if(other.name == target.name){
             Debug.Log("IT WORKS");
             Debug.Log(gameObject);
-            myBoots.IncreaseDamage();
+            //myBoots.IncreaseDamage();
+            items newItem = itemList[0];
+            Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);
         }
         // target

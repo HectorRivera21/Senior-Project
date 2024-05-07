@@ -8,6 +8,7 @@ public class Heart_effect : MonoBehaviour
     public items myItem;
     private GameObject target;
     Player_items player_Items;
+    public List<items> itemList = new List<items>();
 
     private boots myBoots;
 
@@ -24,7 +25,9 @@ public class Heart_effect : MonoBehaviour
         if(other.name == target.name){
             Debug.Log("IT WORKS");
             Debug.Log(gameObject);
-            myBoots.IncreaseHealth();
+            //myBoots.IncreaseHealth();
+            items newItem = itemList[0];
+            Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);
         }
         // target

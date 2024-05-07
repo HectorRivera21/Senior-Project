@@ -14,16 +14,15 @@ public class PlayerAttr : MonoBehaviour
     public int gold = 0;
     public int enemiesKilled = 0;
     public int enemiesToKilled = 0;
-
+   
     //ExpBar xpBar;
 
     public int how_exp = 5;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
 
     // Update is called once per frame
     void Update()
