@@ -10,6 +10,7 @@ public class itemSlot : MonoBehaviour
     private boots myHeart;
     private boots myBoots;
     private boots mySword;
+    private boots myPot;
 
     private GameObject target;
 
@@ -52,6 +53,10 @@ public class itemSlot : MonoBehaviour
                 break;
             case "Sword of Power":
                 myPlayer.damage += 1;
+                Inventory.instance.RemoveItem(item);
+                break;
+            case "Potion of Healing":
+                myPlayer.health += 5;
                 Inventory.instance.RemoveItem(item);
                 break;
             default:

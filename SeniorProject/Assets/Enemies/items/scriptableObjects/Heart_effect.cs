@@ -25,9 +25,9 @@ public class Heart_effect : MonoBehaviour
         if(other.name == target.name){
             Debug.Log("IT WORKS");
             Debug.Log(gameObject);
-            //myBoots.IncreaseHealth();
-            items newItem = itemList[0];
-            Inventory.instance.AddItem(Instantiate(newItem));
+            myBoots.IncreaseHealth();
+            //items newItem = itemList[0];
+            //Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);
         }
         // target
