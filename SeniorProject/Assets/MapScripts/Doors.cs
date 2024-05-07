@@ -23,29 +23,24 @@ public class Doors : MonoBehaviour
             {
                 player_offset.x = 3f;
                 camera_offset.x = 10f;
-                // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + camera_offset.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
             }
             else if (horizontalInput < 0)
             {
                 player_offset.x = -3f;
                 camera_offset.x = -10f;
-                // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + camera_offset.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
             }
             else if (verticalInput > 0)
             {
                 player_offset.y = 3f;
                 camera_offset.y = 10f;
-                // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + camera_offset.y, Camera.main.transform.position.z);
             }
             else if (verticalInput < 0)
             {
                 player_offset.y = -3f;
                 camera_offset.y = -10f;
-                // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + camera_offset.y, Camera.main.transform.position.z);
             }
 
             player.transform.position = new Vector3(player_posx + player_offset.x, player_posy + player_offset.y, player.transform.position.z);
-            // Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + camera_offset.x, Camera.main.transform.position.y + camera_offset.y, Camera.main.transform.position.z);
         }
         else
         {
