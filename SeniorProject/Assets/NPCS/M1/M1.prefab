@@ -693,6 +693,7 @@ MonoBehaviour:
   myItemBoot: {fileID: 11400000, guid: 6238d2519b732764fb0243210cdc6cd1, type: 2}
   myItemHeart: {fileID: 11400000, guid: fda4fbe3738cebb43ae4b39031b7af11, type: 2}
   myItemSword: {fileID: 11400000, guid: a8f4b243d740e64418e63d395caf40ad, type: 2}
+  myItemPot: {fileID: 11400000, guid: 07626d58d97b44c4e91119ce1a488731, type: 2}
   myPlayer: {fileID: 0}
 --- !u!114 &6751490072891587710
 MonoBehaviour:
@@ -754,6 +755,7 @@ MonoBehaviour:
   bootItem: {fileID: 1588096209212788430, guid: 4c0894e66237def4d81b485398a434d6, type: 3}
   heartItem: {fileID: 4961755109466033549, guid: c5fbc75f48edc7e4cb29709f9d782df6, type: 3}
   swordItem: {fileID: 5491038897962479642, guid: ae34849ac0e20ad409baa3e110ccb754, type: 3}
+  potItem: {fileID: 3775109187488254656, guid: a8d6dc0b72d242e46956ffa0d75d5b34, type: 3}
   myPlayer: {fileID: 0}
   playerTransform: {fileID: 0}
 --- !u!1 &6751490072915068634

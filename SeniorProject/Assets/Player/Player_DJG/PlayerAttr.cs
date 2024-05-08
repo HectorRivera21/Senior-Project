@@ -20,6 +20,7 @@ public class PlayerAttr : MonoBehaviour
 
     public bool range_attack = false;
     public int How_many_bullets = 0;
+    public HealthBar HP;
 
     //ExpBar xpBar;
 
