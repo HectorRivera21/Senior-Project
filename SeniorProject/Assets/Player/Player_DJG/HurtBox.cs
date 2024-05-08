@@ -65,9 +65,9 @@ public class HurtBox : MonoBehaviour
             int damage = other.GetComponentInParent<check>().me.damage;
             // Debug.Log(damage);
             // Debug.Log(player.health - damage);
-            healthBar.SetMaxHealth(player.current_health);
+            //healthBar.SetMaxHealth(player.health);
             player.current_health -= damage;
-            healthBar.SetHealth(player.current_health);
+            //healthBar.SetHealth(player.current_health);
         
             if(player.current_health < 0){
               //  Debug.Log("DESTROYED PLAYER");

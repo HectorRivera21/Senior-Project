@@ -18,8 +18,11 @@ public class PlayerAttr : MonoBehaviour
     public int how_many_romms = 0;
 
 
+
+
     public bool range_attack = false;
     public int How_many_bullets = 0;
+    public HealthBar HP;
 
     //ExpBar xpBar;
 
@@ -36,6 +39,9 @@ public class PlayerAttr : MonoBehaviour
         if(exp >= how_exp){
             LevelUp();
         }
+        HP.SetMaxHealth(health);
+        HP.SetHealth(current_health);
+
     }
 
     void LevelUp(){
@@ -48,6 +54,7 @@ public class PlayerAttr : MonoBehaviour
 
         exp = 0;
         health += health_up;
+
         if(current_health + percent_health >= health){
             current_health = health;
             Debug.Log("If New current health: " + current_health);
@@ -56,5 +63,7 @@ public class PlayerAttr : MonoBehaviour
             current_health += percent_health;
             Debug.Log("Else New current health: " + current_health);
         }
+        HP.SetMaxHealth(health);
+        HP.SetHealth(current_health);
     }
 }

@@ -11,6 +11,7 @@ public class Heart_effect : MonoBehaviour
     public List<items> itemList = new List<items>();
 
     private boots myBoots;
+    public HealthBar HP;
 
     private void Awake(){
         // myItem = gameObject.GetComponent<items>();

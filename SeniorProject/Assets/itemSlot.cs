@@ -18,6 +18,7 @@ public class itemSlot : MonoBehaviour
 
     private PlayerAttr myPlayer;
     private DamianMovement player;
+    public HealthBar HP;
 
     public void AddItem(items newItem){
         item = newItem;
@@ -27,6 +28,7 @@ public class itemSlot : MonoBehaviour
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<DamianMovement>();
         myPlayer = player.GetComponent<PlayerAttr>();
+        HP = myPlayer.HP;
     }
 
     public void ClearSlot(){
@@ -45,6 +47,8 @@ public class itemSlot : MonoBehaviour
             case "Heart of Healing":
                 myPlayer.health += 5;
                 myPlayer.current_health += 5;
+                HP.SetMaxHealth(myPlayer.health);
+                HP.SetHealth(myPlayer.current_health);
                 Inventory.instance.RemoveItem(item);
                 break;
             case "Boots Of Swiftness":
@@ -56,8 +60,15 @@ public class itemSlot : MonoBehaviour
                 Inventory.instance.RemoveItem(item);
                 break;
             case "Potion of Healing":
-                myPlayer.health += 5;
+                if((myPlayer.current_health + 5) >= myPlayer.health){
+                    myPlayer.current_health = myPlayer.health;
+                } else{
+                    myPlayer.current_health += 5;
+                }
+                //HP.SetMaxHealth(myPlayer.health);
+                //HP.SetHealth(myPlayer.current_health);
                 Inventory.instance.RemoveItem(item);
+                Debug.Log("Potion health" + myPlayer.current_health);
                 break;
             default:
                 Debug.Log("testing inventory");

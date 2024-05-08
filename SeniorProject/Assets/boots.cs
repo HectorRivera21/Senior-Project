@@ -8,10 +8,13 @@ public class boots : MonoBehaviour
     private DamianMovement player;
     private PlayerAttr playerAttr;
     PlayerHitBox playerHitBox;
+    private HealthBar HP;
+
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<DamianMovement>();
         playerHitBox = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerHitBox>();
         playerAttr = player.GetComponent<PlayerAttr>();
+        HP = playerAttr.HP;
     }
     public void IncreaseSpeed(){
         Debug.Log("adding speed");
@@ -22,6 +25,8 @@ public class boots : MonoBehaviour
         // Debug.Log("Adding health: ");
         playerAttr.health += 5;
         playerAttr.current_health += 5;
+        HP.SetMaxHealth(playerAttr.health);
+        HP.SetHealth(playerAttr.current_health);
         Debug.Log("Adding health: " + playerAttr.current_health);
     }
 
@@ -38,7 +43,8 @@ public class boots : MonoBehaviour
         Debug.Log("Adding Attack Speed: " + playerHitBox.max_can_swing_time);
     }
     public void HeatlhGain(){
-        playerAttr.health += 5;
+        playerAttr.current_health += 5;
+        HP.SetHealth(playerAttr.current_health);
         Debug.Log("Gaining health" + playerAttr.current_health);
     }
 }
