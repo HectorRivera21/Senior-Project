@@ -60,9 +60,15 @@ public class itemSlot : MonoBehaviour
                 Inventory.instance.RemoveItem(item);
                 break;
             case "Potion of Healing":
-                myPlayer.current_health += 5;
-                HP.SetHealth(myPlayer.health);
+                if((myPlayer.current_health + 5) >= myPlayer.health){
+                    myPlayer.current_health = myPlayer.health;
+                } else{
+                    myPlayer.current_health += 5;
+                }
+                //HP.SetMaxHealth(myPlayer.health);
+                //HP.SetHealth(myPlayer.current_health);
                 Inventory.instance.RemoveItem(item);
+                Debug.Log("Potion health" + myPlayer.current_health);
                 break;
             default:
                 Debug.Log("testing inventory");
