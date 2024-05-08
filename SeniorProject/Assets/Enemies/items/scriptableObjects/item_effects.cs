@@ -26,7 +26,10 @@ public class item_effects : MonoBehaviour
             Debug.Log(gameObject);
             Debug.Log(myItem.itemName);
             // player_Items.AddItem(theItem);
-            myBoots.IncreaseSpeed();
+            if(target.GetComponent<PlayerAttr>().max_speed >= target.GetComponent<DamianMovement>().move_speed){
+                myBoots.IncreaseSpeed();
+            }
+            // myBoots.IncreaseSpeed();
             //items newItem = itemList[0];
             //Inventory.instance.AddItem(Instantiate(newItem));
             Destroy(gameObject);

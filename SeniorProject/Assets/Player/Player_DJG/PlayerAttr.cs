@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerAttr : MonoBehaviour
 {
+    public int max_speed = 30;
     public int health = 10;
 
     public int current_health = 10;
