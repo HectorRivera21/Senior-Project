@@ -23,6 +23,7 @@ public class BossSlime : MonoBehaviour
         xpBar = GameObject.Find("ExpBar").GetComponent<ExpBar>();
         health = me.health;
         splitHealth = health/2;
+
     }
 
     void Update() {
@@ -46,6 +47,8 @@ public class BossSlime : MonoBehaviour
         GameObject instantiatedObject1 = Instantiate(SplitSlime, transform.position, Quaternion.identity);
         instantiatedObject1.GetComponent<BossSlime>().health = health;
         instantiatedObject1.GetComponent<BossSlime>().splitHealth = health/2;
+        // instantiatedObject1.GetComponentInChildren<BossHurtBox>().sprite_e
+
         Debug.Log("Split boss health : " +instantiatedObject1.GetComponent<BossSlime>().health);
         Debug.Log("Split boss split health : " +instantiatedObject1.GetComponent<BossSlime>().splitHealth);
 
