@@ -4338,7 +4338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1702324006
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4990,13 +4990,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1789774701}
   - component: {fileID: 1789774702}
+  - component: {fileID: 1789774704}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1789774701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5022,6 +5023,20 @@ RectTransform:
   m_SizeDelta: {x: 550.51, y: 472.6646}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789774702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789774700}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e84036e732f2148a5fae468c46b771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 3f82ca29f223c2e42b25a82ab729186e, type: 2}
+  resolutionDropdown: {fileID: 0}
+--- !u!114 &1789774704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
