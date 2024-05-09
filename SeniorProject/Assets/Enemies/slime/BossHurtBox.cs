@@ -19,7 +19,7 @@ public class BossHurtBox : MonoBehaviour
     {
         e_health = gameObject.GetComponentInParent<BossSlime>().health;
         sprite_e = gameObject.GetComponentInParent<SpriteRenderer>();
-        currentColor = sprite_e.color;
+        currentColor = Color.white;
         slime_sounds = GetComponentInParent<SlimeSfx>();
         // Debug.Log("Starting e_health " + e_health);
     }
